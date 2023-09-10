@@ -1,0 +1,76 @@
+.page-title {
+	@include background-style("../images/page-title/img-1.jpg", center center, cover, no-repeat, local);
+	text-align: center;
+	position: relative;
+
+	@include widther(992px) {
+		margin-top: -70px;
+	}
+
+	> .container {
+		position: relative;
+		height: 480px;
+		z-index: 100;
+
+		@include media-query(991px) {
+			height: 320px;
+		}
+	}
+
+	.title-box {
+		width: 100%;
+		position: absolute;
+		left: 50%;
+		top: 50%;
+		@include center-by-translating();
+
+		h1 {
+			font-size: calc-rem-value(48);
+			color: $white;
+			margin: 0 0 0.12em;
+			text-transform: capitalize;
+
+			span {
+				color: $white;
+			}
+
+			@include media-query(991px) {
+				font-size: calc-rem-value(40);
+			}
+
+			@include media-query(767px) {
+				font-size: calc-rem-value(30);
+			}
+		}
+
+		ol {
+			background: transparent;
+			padding: 0;
+			margin: 0;
+
+			li {
+				color: $theme-secondary-color;
+				font-size: calc-rem-value(18);;
+				text-transform: capitalize;
+
+				@include media-query(991px) {
+					font-size: calc-rem-value(16);
+				}
+
+				@include media-query(767px) {
+					font-size: calc-rem-value(15);
+				}
+			}
+
+			a {
+				color: $white;
+			}
+		}
+
+		.breadcrumb > li + li:before {
+			content: "\f101";
+			font-family: "FontAwesome";
+			color: $white;
+		}
+	}
+}

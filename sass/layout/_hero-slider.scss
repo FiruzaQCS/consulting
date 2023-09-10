@@ -1,0 +1,70 @@
+
+/*--------------------------------------------------------------
+#0.4	hero slider
+--------------------------------------------------------------*/
+.slider-section {
+	margin-top: -70px;
+
+	@include media-query(767px) {
+		.main-heading,
+		.slider-text,
+		.link-button {
+			display: none;
+		}
+	}
+
+	.main-heading {
+		font-family: $heading-font;
+		font-size: calc_rem_value(60);
+		color: $heading-color;
+		font-weight: bold;
+		line-height: calc_rem_value(70);
+	}
+
+	.slider-text {
+		font-size: calc_rem_value(18);
+		line-height: calc_rem_value(30);
+		cursor: auto !important;
+	}
+
+	.slider-btn {
+		background: $theme-primary-color;
+		@include linear-gradient-bg(left, $theme-primary-color, $theme-primary-color2);
+		width: 150px;
+		height: 48px;
+		line-height: 48px;
+		font-size: calc_rem_value(18);
+		color: $white;
+		padding: 0;
+		text-align: center;
+		border: 0;
+		@include rounded-border(55px);
+		@include transition-time(0.3s);
+
+		@include media-query(991px) {
+			width: 120px;
+			height: 42px;
+			line-height: 42px;
+			font-size: calc_rem_value(15);
+
+		}
+	}
+
+	.link-button .slider-btn:nth-child(2) {
+		background: $theme-secondary-color;
+		color: $white;
+	}
+
+	.link-button {
+		a:first-child {
+			margin-right: 25px;
+		}
+	}
+
+}
+
+.home-style2 {
+	.slider-section .main-heading {
+		color: $section-title-heading-color;
+	}
+}

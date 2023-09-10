@@ -1,0 +1,169 @@
+/*** pricing grids ***/
+.pricing-grids {
+	text-align: center;
+
+	.grid:hover {
+		&:before {
+			opacity: 1;
+		}
+
+		h3,
+		li {
+			color: $white;
+		}
+
+		.btn,
+		.btn:before {
+			background: $theme-secondary-color;
+			color: $white;
+		}
+	}
+
+	.grid {
+		background: $pricing-grid-bgcolor;
+		padding: 65px 60px;
+		position: relative;
+		@include transition-time(0.3s);
+
+		@include media-query(1199px) {
+			padding: 65px 40px;
+		}
+
+		@include media-query(767px) {
+			padding: 60px 30px;
+		}
+
+		&:before {
+			content: "";
+			background: $theme-primary-color;
+			@include linear-gradient-bg(left, $theme-primary-color, $theme-primary-color2);
+			width: 100%;
+			height: 100%;
+			position: absolute;
+			left: 0;
+			top: 0;
+			opacity: 0;
+			@include transition-time(0.3s);
+		}
+
+		> div {
+			position: relative;
+		}
+
+		.icon {
+			display: block;
+		}
+
+		.fi:before {
+			font-size: 60px;
+			color: $theme-secondary-color;
+
+			@include media-query(1199px) {
+				font-size: 45px;
+			}
+		}
+
+		h3 {
+			display: inline-block;
+			font-size: calc-rem-value(48);
+			font-weight: normal;
+			margin: 0.31em 0 0;
+			position: relative;
+
+			@include media-query(1199px) {
+				font-size: calc-rem-value(40);
+			}
+
+			@include media-query(767px) {
+				font-size: calc-rem-value(35);
+			}
+
+			span {
+				font-size: calc-rem-value(20);
+				position: absolute;
+				top: 4px;
+				left: -12px;
+			}
+		}
+
+		.pricing-header > span {
+			font-family: $heading-font;
+			display: block;
+			font-size: calc-rem-value(22);
+			color: lighten($black, 60%);
+
+			@include media-query(1199px) {
+				font-size: calc-rem-value(18);
+			}
+		}
+
+		.pricing-details {
+			margin-top: 30px;
+
+			ul {
+				margin-bottom: 50px;
+			}
+		}
+
+		ul li {
+			font-size: calc-rem-value(18);
+			padding-bottom: 7px;
+			margin-bottom: 7px;
+			border-bottom: 1px solid lighten($black, 90%);
+
+			@include media-query(1199px) {
+				font-size: calc-rem-value(16);
+			}
+		}
+
+		ul li:last-child {
+			padding-bottom: 0;
+			margin-bottom: 0;
+			border-bottom: 0;
+		}
+
+		.btn span {
+			position: relative;
+		}
+
+		.btn {
+			background: $theme-primary-color;
+			@include linear-gradient-bg(left, $theme-primary-color, $theme-primary-color2);
+			width: 160px;
+			height: 45px;
+			line-height: 45px;
+			font-size: calc-rem-value(18);
+			font-weight: bold;
+			color: $theme-primary-color;
+			padding: 0;
+			border: 0;
+			position: relative;
+			text-transform: capitalize;
+			@include rounded-border(50px);
+
+			@include media-query(1199px) {
+				width: 130px;
+				height: 40px;
+				line-height: 40px;
+				font-size: calc-rem-value(16);
+			}
+
+			&:before {
+				content: "";
+				background: $white;
+				width: 156px;
+				height: 41px;
+				left: 2px;
+				top: 2px;
+				position: absolute;
+				@include rounded-border(50px);
+
+				@include media-query(1199px) {
+					width: 126px;
+					height: 36px;
+				}
+
+			}
+		}
+	}
+}

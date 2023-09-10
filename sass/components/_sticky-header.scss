@@ -1,0 +1,64 @@
+nav.sticky {
+	background: $theme-primary-color;
+    background: -webkit-linear-gradient(left, $theme-primary-color, $theme-primary-color2);
+    background: -moz-linear-gradient(left, $theme-primary-color, $theme-primary-color2);
+    background: -o-linear-gradient(left, $theme-primary-color, $theme-primary-color2);
+    background: -ms-linear-gradient(left, $theme-primary-color, $theme-primary-color2);
+    background: linear-gradient(left, $theme-primary-color, $theme-primary-color2);
+	width: 100%;
+	position: fixed;
+	left: 0;
+	top: 0;
+	z-index: 9999;
+	-webkit-animation: navigationFlipIn 0.5s;
+	animation: navigationFlipIn 0.5s;
+
+	#navbar {
+		@include widther(992px) {
+			background: transparent;
+		}
+	}
+}
+
+.site-header-style2 nav.sticky2 {
+	@extend .sticky;
+	background: $white;
+	border-bottom: 1px solid lighten($black, 90%);
+}
+
+.site-header-style3 nav.sticky3 {
+	@extend .sticky2;
+	@include widther(992px) {
+		#navbar > ul > li > a {
+			color: $heading-color;
+		}
+
+		#navbar > ul > li > a:hover {
+			color: $theme-secondary-color;
+		}
+	}
+}
+
+@-webkit-keyframes navigationFlipIn {
+	from {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+
+	to {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}
+
+@keyframes navigationFlipIn {
+	from {
+		-webkit-transform: translateY(-100%);
+		transform: translateY(-100%);
+	}
+
+	to {
+		-webkit-transform: translateY(0);
+		transform: translateY(0);
+	}
+}

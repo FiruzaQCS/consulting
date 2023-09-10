@@ -1,0 +1,65 @@
+.services-style2-grids {
+	text-align: center;
+
+	.grid {
+		@include linear-gradient-bg(left, $theme-primary-color, $theme-primary-color2);
+		padding: 35px 45px;
+		position: relative;
+
+		@include media-query(1199px) {
+			background: $white;
+			border: 1px solid $theme-primary-color2;
+			padding: 25px 35px;
+		}
+
+		@include media-query(767px) {
+			padding: 25px 15px;
+		}
+
+		&:before {
+			content: "";
+			background-color: $white;
+			width: 99%;
+			height: 99%;
+			position: absolute;
+			left: 2px;
+			top: 2px;
+
+			@include media-query(1199px) {
+				display: none;
+			}
+		}
+
+		> div {
+			position: relative;
+		}
+
+
+		.icon .fi:before {
+			font-size: 65px;
+			color: $theme-secondary-color;
+
+			@include media-query(1199px) {
+				font-size: 50px;
+			}
+
+			@include media-query(767px) {
+				font-size: 40px;
+			}
+		}
+
+		h3 {
+			font-size: calc-rem-value(28);
+			font-weight: normal;
+			margin: 0.27em 0 0.7em;
+
+			@include media-query(1199px) {
+				font-size: calc-rem-value(20);
+			}
+
+			@include media-query(767px) {
+				font-size: calc-rem-value(18);
+			}
+		}
+	}
+}

@@ -1,0 +1,60 @@
+.featured .grid {
+	position: relative;
+	overflow: hidden;
+
+	.img-holder {
+		min-height: 250px;
+		img {
+			display: none;
+		}
+	}
+
+	&:hover {
+		.details {
+			bottom: 0;
+			padding: 45px 22px;
+		}
+	}
+
+	.details {
+		background: transparentize($theme-primary-color, 0.1);
+		@include linear-gradient-bg(left, transparentize($theme-primary-color, 0.1), transparentize($theme-primary-color2, 0.1));
+		width: 100%;
+		height: 100%;
+		padding: 20px 22px;
+		position: absolute;
+		left: 0;
+		bottom: -74%;
+		@include transition-time(0.3s);
+
+		@include media-query(1199px) {
+			bottom: -74%;
+		}
+
+		@include media-query(991px) {
+			bottom: -76%;
+		}
+
+		h3 {
+			font-size: calc_rem_value(22);
+			color: $white;
+			text-transform: capitalize;
+			margin: 0 0 1em;
+			position: relative;
+
+			@include media-query(991px) {
+				font-size: calc_rem_value(18);
+			}
+		}
+
+		h3 .fi {
+			position: absolute;
+			right: 0;
+		}
+
+		p {
+			color: $white;
+			margin: 0;
+		}
+	}	
+}

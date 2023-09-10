@@ -1,0 +1,50 @@
+/*---------------------------
+	Fonts
+----------------------------*/
+@import url('https://fonts.googleapis.com/css?family=Lato:400,400i,700|Roboto+Slab:400,700');
+
+// fonts
+$lato: 'Lato', sans-serif;
+$roboto-slab: 'Roboto Slab', serif;
+
+$base-font: $lato;
+$heading-font: $roboto-slab;
+$base-font-size: 16;
+$footer-blog-title-font: $lato;
+
+
+// color
+$white: #fff;
+$black: #000;
+$powder-gray: #667380;
+$blue: #193775;
+$blue2: #031633;
+$dark-blue: #06223e;
+$darken-gray: #152029;
+$darken-gray2: #0f1624;
+$orange: #9c1420;
+$powder-sky: #00abc9;
+$light-blue: #eef1f5;
+$darken-blue: #0c131f;
+$light-sky: #f2f6f8;
+$light-sty2: #ebeff3;
+$light-green: #54be73;
+
+$theme-primary-color: $blue;
+$theme-primary-color2: $powder-sky;
+$theme-secondary-color: $orange;
+$text-color: $powder-gray;
+$heading-color: $dark-blue;
+$topbar-color: $darken-gray; 
+$footer-color: $darken-gray2; 
+$upper-footer-color: $darken-gray; 
+$services-title-color: $blue2;
+$section-title-heading-color: $dark-blue;
+$contact-form-input-bgcolor: $light-blue;
+$footer-newsletter-bgcolor: $darken-blue;
+$pricing-grid-bgcolor: $light-sky;
+$newsletter-widget-bgcolor: $light-sky;
+$facebook-color: #00529c;
+$linkedin-color: #03638f;
+$twitter-color: #65b2e5;
+$testimonial-page-quotebg-color: $light-sty2;

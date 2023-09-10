@@ -1,0 +1,27 @@
+.theme-btn {
+	background-color: $theme-primary-color;
+	font-size: calc-rem-value(17);
+	color: $white;
+	padding: 10px 30px;
+	border: 0;
+	text-transform: capitalize;
+	@include rounded-border(0);
+	@include transition-time(0.5s);
+
+	&:hover,
+	&:focus,
+	&:active {
+		background-color: darken($theme-primary-color, 5%);
+		color: $white;
+	}
+
+	@include media-query(991px) {
+		font-size: calc-rem-value(16);
+		padding: 8px 25px;
+	}
+
+	@include media-query(767px) {
+		font-size: calc-rem-value(15);
+		padding: 8px 22px;
+	}
+}

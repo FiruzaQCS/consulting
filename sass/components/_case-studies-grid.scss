@@ -1,0 +1,59 @@
+/**** case studies grid ***/
+.case-studies-grids {
+	.grid:hover .img-holder a:before {
+		opacity: 1;
+	}
+
+	.img-holder {
+		position: relative;
+
+		a:before {
+			content: "";
+			@include linear-gradient-overlay(left, transparentize($theme-primary-color, 0.1), transparentize($theme-primary-color2, 0.1));
+			opacity: 0;
+			@include transition-time(0.3s);
+		}
+	}
+
+	.grid .details {
+		
+		h3 {
+			font-size: calc-rem-value(24);
+			font-weight: normal;
+			line-height: 1.2em;
+			margin: 1em 0 0.42em;
+
+			@include media-query(991px) {
+				font-size: calc-rem-value(20);
+			}
+
+			@include media-query(767px) {
+				font-size: calc-rem-value(20);
+			}
+
+			@include media-query(550px) {
+				font-size: calc-rem-value(18);
+			}
+		}
+
+		h3 a {
+			color: $heading-color;
+		}
+
+		> span {
+			display: block;
+			color: $text-color;
+			margin-bottom: 40px;
+
+			@include media-query(991px) {
+				margin-bottom: 25px;
+			}
+		}
+
+		.view-case-studes {
+			font-size: clac-rem-value(18);
+			font-weight: bold;
+			color: $theme-secondary-color;
+		}
+	}
+}

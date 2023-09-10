@@ -1,0 +1,293 @@
+/*--------------------------------------------------------------
+#	home style 3
+--------------------------------------------------------------*/
+/*--------------------------------------------------------------
+#2.1	featured
+--------------------------------------------------------------*/
+.home-style3 .slider-section {
+	margin-top: 0;
+}
+
+.home-style3 .faq {
+	padding-top: 0;
+}
+
+.home-style3 .featured {
+	padding: 0;
+	position: relative;
+	z-index: 50;
+
+	@include media-query(991px) {
+		padding-top: 100px;
+	}
+
+	@include media-query(767px) {
+		padding-top: 80px;
+	}
+
+	@include widther(992px) {
+		margin-top: -65px;
+	}
+
+	.content > .col:last-child {
+		@include media-query(1199px) {
+			margin-bottom: 0;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.2	about-us-section-style3
+--------------------------------------------------------------*/
+.about-us-section-style3 {
+	padding-bottom: 55px;
+	
+	@include media-query(991px) {
+		padding-bottom: 100px;
+	}
+	
+	@include media-query(767px) {
+		padding-bottom: 80px;
+	}
+
+	@extend .about-us-section-style2;
+	background-image: none;
+
+	.about-company-slider-wrapper {
+		@include media-query(991px) {
+			margin-top: 60px;
+		}
+	}
+
+	.about-company-slider {
+		position: relative;
+
+		img {
+			max-width: 100%;
+		}
+
+		@include media-query(991px) {
+			max-width: 500px;
+		}
+
+		.owl-controls {
+			width: 100%;
+			margin: 0;
+			position: absolute;
+			top: 50%;
+			@include translatingY();
+		}
+
+		.owl-controls .owl-nav > div {
+			background: $theme-secondary-color;
+			width: 40px;
+			height: 40px;
+			line-height: 40px;
+			margin: 0;
+			padding: 0;
+			@include rounded-border(0);
+			@include transition-time(0.3s);
+
+			@include media-query(767px) {
+				width: 35px;
+				height: 35px;
+				line-height: 35px;
+			}
+		}
+
+		.owl-controls .owl-nav .owl-prev,
+		.owl-controls .owl-nav .owl-next {
+			position: absolute;
+			top: 50%;
+			@include translatingY();
+		}
+
+		.owl-controls .owl-nav > div:hover {
+			background: $theme-primary-color;
+		}
+
+		.owl-controls .owl-nav .owl-prev {
+			left: 0;
+		}
+
+		.owl-controls .owl-nav .owl-next {
+			right: 0;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.3	team
+--------------------------------------------------------------*/
+.team {
+	.team-slider .owl-controls {
+		margin-top: 60px;
+
+		@include media-query(767px) {
+			margin-top: 40px;
+		}
+	}
+
+	.team-slider .owl-controls .owl-dots > div span {
+		background: $theme-primary-color;
+		@include linear-gradient-bg(left, $theme-primary-color, $theme-primary-color2);
+		width: 18px;
+		height: 18px;
+		margin: 0 10px 0 0;
+		position: relative;
+
+		@include media-query(767px) {
+			width: 15px;
+			height: 15px;
+			margin: 0 7px 0 0;
+		}
+	}
+
+	.team-slider .owl-controls .owl-dots > div span:before {
+		content: "";
+		width: 14px;
+		height: 14px;
+		background: $white;
+		position: absolute;
+		left: 2px;
+		top: 2px;
+		@include rounded-border();
+
+		@include media-query(767px) {
+			width: 11px;
+			height: 11px;
+			left: 2px;
+			top: 2px;
+		}
+	}
+
+	.team-slider .owl-controls .owl-dots > .active span:before {
+		background: $theme-secondary-color;
+		box-shadow: 0 0 0 2px $theme-secondary-color;
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.4	pricing
+--------------------------------------------------------------*/
+.pricing {
+
+	.section-title {
+		text-align: left;
+
+		h2:after {
+			left: 0;
+			-webkit-transform: none;
+			-moz-transform: none;
+			-o-transform: none;
+			-ms-transform: none;
+			transform: none;
+		}
+	}
+
+	.pricing-grids > .col {
+		@include media-query(991px) {
+			margin-bottom: 80px;
+
+			&:last-child {
+				margin-bottom: 0;
+				margin-left: 187px;
+			}
+		}
+
+		@include media-query(767px) {
+			margin-bottom: 45px;
+
+			&:last-child {
+				margin-left: 0;
+			}
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.5	cta
+--------------------------------------------------------------*/
+.cta {
+	padding: 70px 0;
+	position: relative;
+
+	&:before {
+		content: "";
+		background: transparentize($theme-primary-color, 0.1);
+		@include linear-gradient-overlay(left, transparentize($theme-primary-color, 0.1), transparentize($theme-primary-color2, 0.1));
+	}
+
+	h5 {
+		font-size: calc-rem-value(36);
+		color: $white;
+		margin: 0;
+
+		@include media-query(991px) {
+			font-size: calc-rem-value(22);
+			line-height: 1.3em;
+		}
+	}
+
+	.btn {
+		background-color: $theme-secondary-color;
+		font-size: calc-rem-value(17);
+		color: $white;
+		padding: 12px 35px;
+		position: absolute;
+		right: 15px;
+		top: 50%;
+		@include translatingY();
+		@include rounded-border(30px);
+
+		@include media-query(991px) {
+			font-size: calc-rem-value(16);
+			padding: 10px 25px;
+		}
+
+		@include media-query(767px) {
+			font-size: calc-rem-value(15);
+			position: static;
+			margin-top: 25px;
+			padding: 8px 20px;
+			-webkit-transform: none;
+			-moz-transform: none;
+			-o-transform: none;
+			-ms-transform: none;
+			transform: none;
+		}
+	}
+}
+
+
+/*--------------------------------------------------------------
+#2.6	partner
+--------------------------------------------------------------*/
+.partner {
+	text-align: center;
+	padding: 80px 0;
+
+	@include media-query(767px) {
+		padding: 50px 0;
+	}
+
+	.grid img {
+		display: inline-block;
+		width: auto;
+		max-width: 90%;
+	}
+}
+
+.home-style3 .blog-section {
+	padding-bottom: 0;
+
+	.blog-section-grids > .col:last-child {
+		@include media-query(991px) {
+			margin-bottom: 0;
+		}
+	}
+}
