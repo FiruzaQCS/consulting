@@ -5416,3 +5416,39 @@ nav.sticky, .site-header-style2 nav.sticky2, .site-header-style3 nav.sticky2, .s
 .contact-section-wrapper{
   padding-bottom: 0 !important;
 }
+
+.faq-page .faq-content {
+  padding-right: 45px;
+}
+.faq-page .faq-content .panel {
+  border: 0;
+  margin-top: 10px;
+  box-shadow: none;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  -o-border-radius: 0;
+  -ms-border-radius: 0;
+  border-radius: 0;
+  background-color: #fff;
+}
+
+.faq-page .faq-content .panel-body {
+  padding: 40px 50px;
+  position: relative;
+}
+
+.faq-page .faq-content .panel-heading .collapsed {
+    background: #fff;
+    color: #06223e;
+    border: 2px solid #193775;
+}
+
+.panel-heading{
+  background: #fff !important;
+  padding: 20px 20px;
+  border: 1px solid #193775 !important;
+}
+.panel-heading a{
+  color: #193775;
+  font-weight: bold;
+}
