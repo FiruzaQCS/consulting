@@ -81,6 +81,115 @@
         color: #9c1420;
         padding-right: 10px;
     }
+
+    .recent-job {
+        position: relative;
+    }
+
+    .recent-job:before {
+        content: "";
+        background: -webkit-linear-gradient(left, rgba(25, 55, 117, 0.9), rgba(0, 171, 201, 0.9));
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+    }
+
+    .recent-job .job-list {
+        background-color: #f39c12;
+        background: -webkit-linear-gradient(left, #fff 30%, #f39c12 30.1%);
+        padding: 75px 45px;
+        overflow: hidden;
+    }
+
+    .recent-job .job-list:before {
+        content: "";
+        background-color: #fff;
+        width: 200px;
+        height: 100%;
+        position: absolute;
+        left: 200px;
+        top: 0;
+        -webkit-transform: skewX(-20deg);
+        -ms-transform: skewX(-20deg);
+        transform: skewX(-20deg);
+    }
+
+    .recent-job .job-list .job-title {
+        width: 40%;
+        height: 100%;
+        float: left;
+        position: relative;
+        z-index: 10;
+    }
+
+    .recent-job .job-list .job-title h3 {
+        font-size: 2rem;
+        line-height: 1.3em;
+        font-weight: normal;
+        color: #1a1a1a;
+        margin: 0 0 0.4em;
+    }
+
+    .recent-job .job-list .job-title .job-post {
+        display: block;
+        font-size: 1.0625rem;
+        font-weight: bold;
+        color: #999999;
+    }
+
+    .recent-job .job-list .job-description {
+        width: 60%;
+        height: 100%;
+        float: left;
+        position: relative;
+        z-index: 10;
+        overflow: hidden;
+    }
+
+    .recent-job .job-list .job-description .left-col {
+        width: 60%;
+        float: left;
+    }
+
+    .recent-job .job-list .job-description p,
+    .recent-job .job-list .job-description a {
+        color: #fff;
+    }
+
+    .recent-job .job-list .job-description .left-col .details {
+        font-size: 1.125rem;
+        font-weight: bold;
+    }
+
+    .recent-job .job-list .job-description .right-col {
+        width: 40%;
+        float: left;
+        text-align: center;
+        margin-top: -12px;
+    }
+
+    .recent-job .job-list .job-description .icon {
+        font-size: 50px;
+        color: #fff;
+    }
+
+    .recent-job .job-list .job-description .location {
+        font-size: 1.125rem;
+        margin-bottom: 5px;
+        display: block;
+        color: #fff;
+    }
+
+    .recent-job .job-list .job-description .apply-btn {
+        background-color: #fff;
+        display: inline-block;
+        color: #f39c12;
+        padding: 10px 30px;
+        margin-top: 10px;
+        border-radius: 30px;
+    }
 </style>
 
 <body>
@@ -213,9 +322,9 @@
                                 </div>
                             </div>
                             <div class="col col-md-9">
-                              <h3 style="margin: 0;">
-                                Build your organization’s culture of quality with the support of QCS LLC
-                              </h3>
+                                <h3 style="margin: 0;">
+                                    Build your organization’s culture of quality with the support of QCS LLC
+                                </h3>
                             </div>
                         </div>
                         <div class="row gallery-row">
@@ -247,7 +356,7 @@
                                     LLC membership gives you a wide range of opportunities at the best price:
                                 </p>
                             </div>
-                          
+
                         </div>
                         <div class="row reason-joinus">
                             <div class="col col-lg-6 grid-wrapper">
@@ -317,9 +426,15 @@
                             <div class="widget download-widget">
                                 <h3>Download documents</h3>
                                 <ul>
-                                    <li><a target="_blank" href="images/publisher/Audits-Certification-procedure-extraction-QMS-PR-011.pdf"><i class="fa fa-file-pdf-o"></i> Audits & Certification procedure (Extraction)</a></li>
-                                    <li><a target="_blank" href="images/publisher/QCS-Anti-Corruption-Policy-Statement.pdf"><i class="fa fa-file-pdf-o"></i> QCS Anti-Corruption Policy Statement
-                                    </a></li>
+                                    <li><a target="_blank"
+                                            href="images/publisher/Audits-Certification-procedure-extraction-QMS-PR-011.pdf"><i
+                                                class="fa fa-file-pdf-o"></i> Audits & Certification procedure
+                                            (Extraction)</a></li>
+                                    <li><a target="_blank"
+                                            href="images/publisher/QCS-Anti-Corruption-Policy-Statement.pdf"><i
+                                                class="fa fa-file-pdf-o"></i> QCS Anti-Corruption Policy Statement
+                                        </a></li>
+                                    <li style="text-align: center;"><a href="publications.html">View more</a></li>
                                 </ul>
                             </div>
 
@@ -335,7 +450,39 @@
                 </div>
             </div> <!-- end container -->
         </section>
-
+        <section class="recent-job section-padding parallax" data-bg-image="images/membership/recent-job-bg.jpg"
+            style="background-image: url(&quot;images/membership/recent-job-bg.jpg&quot;); background-position: 50% 12.3844px; background-size: cover;">
+            <div class="container">
+                <div class="row">
+                    <div class="col col-xs-12">
+                        <div class="recent-job-slider">
+                            <div class="job-list">
+                                <div class="job-title">
+                                    <h3>Associate Consultant Intern</h3>
+                                    <span class="job-post">Project Management</span>
+                                </div>
+                                <div class="job-description">
+                                    <div class="left-col">
+                                        <p>Offered as part of our internship program for undergrads, as an
+                                            associate consultant intern you'll gain broad exposure to the
+                                            consulting industry and to business strategy.</p>
+                                    </div>
+                                    <div class="right-col">
+                                        <span class="icon">
+                                            <i class="fa fa-map-marker"></i>
+                                        </span>
+                                        <span class="location">	
+                                            90 State Street Suite 700,
+                                            Albany, New York, US, 12207</span>
+                                        <a href="index.html#contact" class="btn apply-btn">Apply Now</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div> <!-- end row -->
+            </div> <!-- end container -->
+        </section>
         <!-- start footer-->
         <footer class="site-footer">
             <div class="upper-footer">
