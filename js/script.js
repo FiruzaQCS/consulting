@@ -1,6 +1,6 @@
-(function($) {
+(function ($) {
 
-	"use strict";
+    "use strict";
 
 
 
@@ -8,7 +8,7 @@
         = FUNCTIONS
     -------------------------------------------*/
     // Check ie and version
-    function isIE () {
+    function isIE() {
         var myNav = navigator.userAgent.toLowerCase();
         return (myNav.indexOf('msie') != -1) ? parseInt(myNav.split('msie')[1], 10) : false;
     }
@@ -21,26 +21,26 @@
         var closeBtn = $("#navbar .close-navbar");
         var navLinks = $("#navbar > ul > li > a");
 
-        openBtn.on("click", function() {
+        openBtn.on("click", function () {
             if (!navbar.hasClass("slideInn")) {
                 navbar.addClass("slideInn");
             }
             return false;
         })
 
-        closeBtn.on("click", function() {
+        closeBtn.on("click", function () {
             if (navbar.hasClass("slideInn")) {
                 navbar.removeClass("slideInn");
             }
-            return false; 
+            return false;
 
         })
-        
-        navLinks.on("click", function() {
+
+        navLinks.on("click", function () {
             if (navbar.hasClass("slideInn")) {
                 navbar.removeClass("slideInn");
             }
-            return false;            
+            return false;
         })
     }
 
@@ -56,7 +56,7 @@
             nav_height = nav.outerHeight(),
             home = nav.find(" > ul > li:first");
 
-        sections.each(function() {
+        sections.each(function () {
             var top = $(this).offset().top - nav_height,
                 bottom = top + $(this).outerHeight();
 
@@ -75,32 +75,44 @@
     }
 
     // smooth-scrolling
-    $(function() {
-        $("#navbar > ul > li > a:not(.dropdown-toggle)").on("click", function() {
-            if (location.pathname.replace(/^\//,'') === this.pathname.replace(/^\//,'') && location.hostname === this.hostname) {
-                var target = $(this.hash);
-                target = target.length ? target : $("[name=" + this.hash.slice(1) +"]");
-                if (target.length) {
-                    $("html, body").animate({
-                    scrollTop: target.offset().top -60
-                }, 1000, "easeInOutExpo");
-                    return false;
-                }
+    $(function () {
+        $("#navbar > ul > li > a:not(.dropdown-toggle)").on("click", function (event) {
+            // Check if the clicked link is an external link
+            if (this.href.endsWith('.html')) {
+                // Allow normal redirection for external links
+                window.location.href = this.href;
+                return;
             }
 
-            return false;
+            // Check if the link's href attribute ends with '.html'
+            if (this.href.endsWith('.html')) {
+                // Allow normal redirection for links to HTML pages
+                return;
+            }
+
+            // Smooth scroll behavior for on-page links
+            event.preventDefault();
+            var target = $(this.hash);
+            if (target.length) {
+                $("html, body").animate({
+                    scrollTop: target.offset().top - 60
+                }, 1000, "easeInOutExpo");
+            }
         });
-    });  
+
+
+
+    });
 
 
     // Parallax background
     function bgParallax() {
         if ($(".parallax").length) {
-            $(".parallax").each(function() {
+            $(".parallax").each(function () {
                 var height = $(this).position().top;
-                var resize     = height - $(window).scrollTop();
-                var doParallax = -(resize/5);
-                var positionValue   = doParallax + "px";
+                var resize = height - $(window).scrollTop();
+                var doParallax = -(resize / 5);
+                var positionValue = doParallax + "px";
                 var img = $(this).data("bg-image");
 
                 $(this).css({
@@ -160,9 +172,9 @@
                 body.css({
                     "padding-top": headerStyle2Height + "px"
                 });
-            }  else if (headerStyle3.length && (scroll > top)) {
+            } else if (headerStyle3.length && (scroll > top)) {
                 navigation.addClass("sticky3");
-            }  else {
+            } else {
                 navigation.removeClass("sticky");
                 navigation.removeClass("sticky2");
                 navigation.removeClass("sticky3");
@@ -178,11 +190,11 @@
         = WOW ANIMATION SETTING
     -------------------------------------------*/
     var wow = new WOW({
-        boxClass:     'wow',      // default
+        boxClass: 'wow',      // default
         animateClass: 'animated', // default
-        offset:       0,          // default
-        mobile:       true,       // default
-        live:         true        // default
+        offset: 0,          // default
+        mobile: true,       // default
+        live: true        // default
     });
 
 
@@ -190,13 +202,13 @@
         = HIDE PRELOADER
     -------------------------------------------*/
     function preloader() {
-        if($('.preloader').length) {
-            $('.preloader').delay(100).fadeOut(500, function() {
+        if ($('.preloader').length) {
+            $('.preloader').delay(100).fadeOut(500, function () {
 
                 //active wow
                 wow.init();
 
-                $(window).on("scroll", function() {
+                $(window).on("scroll", function () {
                     stickyMenu();
                 });
             });
@@ -206,49 +218,49 @@
 
     /*------------------------------------------
         = ACTIVE POPUP IMAGE
-    -------------------------------------------*/  
+    -------------------------------------------*/
     if ($(".fancybox").length) {
         $(".fancybox").fancybox({
-            openEffect  : "elastic",
-            closeEffect : "elastic",
-            wrapCSS     : "project-fancybox-title-style"
+            openEffect: "elastic",
+            closeEffect: "elastic",
+            wrapCSS: "project-fancybox-title-style"
         });
     }
 
 
     /*------------------------------------------
         = POPUP VIDEO
-    -------------------------------------------*/  
+    -------------------------------------------*/
     if ($(".video-btn").length) {
-        $(".video-btn").on("click", function(){
+        $(".video-btn").on("click", function () {
             $.fancybox({
                 href: this.href,
                 type: $(this).data("type"),
-                'title'         : this.title,
-                helpers     : {  
-                    title : { type : 'inside' },
-                    media : {}
+                'title': this.title,
+                helpers: {
+                    title: { type: 'inside' },
+                    media: {}
                 },
 
-                beforeShow : function(){
+                beforeShow: function () {
                     $(".fancybox-wrap").addClass("gallery-fancybox");
                 }
             });
             return false
-        });    
+        });
     }
 
 
     /*------------------------------------------
         = ACTIVE GALLERY POPUP IMAGE
-    -------------------------------------------*/  
+    -------------------------------------------*/
     if ($(".popup-gallery").length) {
         $('.popup-gallery').magnificPopup({
             delegate: 'a',
             type: 'image',
 
             gallery: {
-              enabled: true
+                enabled: true
             },
 
             zoom: {
@@ -256,11 +268,11 @@
 
                 duration: 300,
                 easing: 'ease-in-out',
-                opener: function(openerElement) {
+                opener: function (openerElement) {
                     return openerElement.is('img') ? openerElement : openerElement.find('img');
                 }
             }
-        });    
+        });
     }
 
 
@@ -271,7 +283,7 @@
         if ($(".sortable-grids .grids-filters").length) {
             var $container = $('.grids-container');
             $container.isotope({
-                filter:'*',
+                filter: '*',
                 animationOptions: {
                     duration: 750,
                     easing: 'linear',
@@ -279,12 +291,12 @@
                 }
             });
 
-            $(".grids-filters li a").on("click", function() {
+            $(".grids-filters li a").on("click", function () {
                 $('.grids-filters li .current').removeClass('current');
                 $(this).addClass('current');
                 var selector = $(this).attr('data-filter');
                 $container.isotope({
-                    filter:selector,
+                    filter: selector,
                     animationOptions: {
                         duration: 750,
                         easing: 'linear',
@@ -296,7 +308,7 @@
         }
     }
 
-    sortingGrids(); 
+    sortingGrids();
 
 
     /*------------------------------------------
@@ -315,17 +327,17 @@
     function mainSlider() {
         if ($('.tp-banner').length) {
             $('.tp-banner').revolution({
-                delay:9000,
-                startwidth:1170,
+                delay: 9000,
+                startwidth: 1170,
                 startheight: 800,
-                hideThumbs:10,
-                fullWidth:"on",
-                forceFullWidth:"on",
-                onHoverStop:"off",
-                navigationType:"none",
-                navigationStyle:"preview4",
-                spinner:"off",
-                hideTimerBar:"on"
+                hideThumbs: 10,
+                fullWidth: "on",
+                forceFullWidth: "on",
+                onHoverStop: "off",
+                navigationType: "none",
+                navigationStyle: "preview4",
+                spinner: "off",
+                hideTimerBar: "on"
             });
         }
     }
@@ -339,18 +351,18 @@
     if ($(".featured").length) {
         var grid = $(".featured .grid");
 
-        grid.each(function() {
+        grid.each(function () {
             var $this = $(this);
             var imgHolder = $this.find(".img-holder");
             var imgSrc = $this.find("img").attr("src");
 
             imgHolder.css({
-                backgroundImage: "url("+ imgSrc +")",
+                backgroundImage: "url(" + imgSrc + ")",
                 backgroundSize: "cover",
                 backgroundPosition: "center center"
             })
         })
-    } 
+    }
 
 
     /*------------------------------------------
@@ -358,24 +370,24 @@
     -------------------------------------------*/
     if ($(".start-count").length) {
         $('.counter').appear();
-        $(document.body).on('appear', '.counter', function(e) {
+        $(document.body).on('appear', '.counter', function (e) {
             var $this = $(this),
-            countTo = $this.attr('data-count');
+                countTo = $this.attr('data-count');
 
-            $({ countNum: $this.text()}).animate({
+            $({ countNum: $this.text() }).animate({
                 countNum: countTo
             }, {
                 duration: 3000,
-                easing:'linear',
-                step: function() {
+                easing: 'linear',
+                step: function () {
                     $this.text(Math.floor(this.countNum));
                 },
-                complete: function() {
+                complete: function () {
                     $this.text(this.countNum);
                 }
             });
         });
-    } 
+    }
 
 
     /*------------------------------------------
@@ -385,13 +397,13 @@
         if ($(".progress-bar").length) {
             var $progress_bar = $('.progress-bar');
             $progress_bar.appear();
-            $(document.body).on('appear', '.progress-bar', function() {
+            $(document.body).on('appear', '.progress-bar', function () {
                 var current_item = $(this);
                 if (!current_item.hasClass('appeared')) {
                     var percent = current_item.data('percent');
                     current_item.append('<span>' + percent + '%' + '</span>').css('width', percent + '%').addClass('appeared');
                 }
-                
+
             });
         };
     }
@@ -404,16 +416,16 @@
     -------------------------------------------*/
     if ($(".about-us-slider").length) {
         $(".about-us-slider").owlCarousel({
-            autoplay:true,
-            smartSpeed:300,
-            items:1,
-            loop:true,
-            margin:0,
-            dots:false,
-            center:true,
-            autoplayHoverPause:true,
+            autoplay: true,
+            smartSpeed: 300,
+            items: 1,
+            loop: true,
+            margin: 0,
+            dots: false,
+            center: true,
+            autoplayHoverPause: true,
             nav: true,
-            navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
         });
     }
 
@@ -423,21 +435,21 @@
     -------------------------------------------*/
     if ($(".testimonials-slider").length) {
         $(".testimonials-slider").owlCarousel({
-            autoplay:true,
+            autoplay: true,
             mouseDrag: false,
-            smartSpeed:300,
+            smartSpeed: 300,
             margin: 30,
-            loop:true,
-            dots:false,
-            autoplayHoverPause:true,
+            loop: true,
+            dots: false,
+            autoplayHoverPause: true,
             nav: true,
-            navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"],
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"],
             responsive: {
-                0 : {
+                0: {
                     items: 1
                 },
 
-                992 : {
+                992: {
                     items: 2
                 }
             }
@@ -450,16 +462,16 @@
     -------------------------------------------*/
     if ($(".testimonials-slider-style2").length) {
         $(".testimonials-slider-style2").owlCarousel({
-            autoplay:true,
+            autoplay: true,
             items: 1,
             mouseDrag: false,
-            smartSpeed:300,
+            smartSpeed: 300,
             margin: 30,
-            loop:true,
-            dots:false,
-            autoplayHoverPause:true,
+            loop: true,
+            dots: false,
+            autoplayHoverPause: true,
             nav: true,
-            navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
         });
     }
 
@@ -476,7 +488,7 @@
             contactSection.addClass("hide-content");
             mapSection.find(".overlay").addClass("hide-content");
 
-            btns.on("click", function() {
+            btns.on("click", function () {
                 var $this = $(this);
                 if (!$this.hasClass("active")) {
                     $this.addClass("active");
@@ -493,7 +505,7 @@
                     }
                 }
 
-                return false; 
+                return false;
             });
         }
     }
@@ -506,16 +518,16 @@
     -------------------------------------------*/
     if ($(".about-company-slider").length) {
         $(".about-company-slider").owlCarousel({
-            autoplay:true,
+            autoplay: true,
             items: 1,
             mouseDrag: false,
-            smartSpeed:300,
+            smartSpeed: 300,
             margin: 30,
-            loop:true,
-            dots:false,
-            autoplayHoverPause:true,
+            loop: true,
+            dots: false,
+            autoplayHoverPause: true,
             nav: true,
-            navText: ["<i class='fa fa-angle-left'></i>","<i class='fa fa-angle-right'></i>"]
+            navText: ["<i class='fa fa-angle-left'></i>", "<i class='fa fa-angle-right'></i>"]
         });
     }
 
@@ -525,22 +537,22 @@
     -------------------------------------------*/
     if ($(".team-slider").length) {
         $(".team-slider").owlCarousel({
-            autoplay:true,
+            autoplay: true,
             mouseDrag: false,
-            smartSpeed:300,
+            smartSpeed: 300,
             margin: 30,
-            loop:true,
-            autoplayHoverPause:true,
+            loop: true,
+            autoplayHoverPause: true,
             responsive: {
-                0 : {
+                0: {
                     items: 1
                 },
 
-                451 : {
+                451: {
                     items: 2
                 },
 
-                992 : {
+                992: {
                     items: 3
                 }
             }
@@ -553,25 +565,25 @@
     -------------------------------------------*/
     if ($(".partner-slider").length) {
         $(".partner-slider").owlCarousel({
-            autoplay:true,
+            autoplay: true,
             items: 5,
-            smartSpeed:300,
-            loop:true,
-            dots:false,
+            smartSpeed: 300,
+            loop: true,
+            dots: false,
             responsive: {
-                0 : {
+                0: {
                     items: 1
                 },
 
-                350 : {
+                350: {
                     items: 2
                 },
 
-                500 : {
+                500: {
                     items: 3
                 },
 
-                991 : {
+                991: {
                     items: 5
                 }
             }
@@ -584,11 +596,11 @@
     -------------------------------------------*/
     if ($(".about-company-s2-slider").length) {
         $(".about-company-s2-slider").owlCarousel({
-            autoplay:true,
-            smartSpeed:300,
-            items:1,
-            loop:true,
-            margin:0,
+            autoplay: true,
+            smartSpeed: 300,
+            items: 1,
+            loop: true,
+            margin: 0,
         });
     }
 
@@ -598,16 +610,16 @@
     -------------------------------------------*/
     if ($(".service-single-slider").length) {
         $(".service-single-slider").owlCarousel({
-            autoplay:true,
-            smartSpeed:300,
-            loop:true,
-            margin:30,
+            autoplay: true,
+            smartSpeed: 300,
+            loop: true,
+            margin: 30,
             responsive: {
-                0 : {
+                0: {
                     items: 2
                 },
 
-                992 : {
+                992: {
                     items: 2
                 }
             }
@@ -625,9 +637,9 @@
             var $chart = $("#chart");
             $chart.appear();
 
-            $(document.body).on('appear', '#chart', function() {
+            $(document.body).on('appear', '#chart', function () {
                 var current_item = $(this);
-                
+
                 if (!current_item.hasClass('appeared')) {
                     current_item.addClass('appeared');
 
@@ -652,7 +664,7 @@
 
                                 {
                                     label: "Our clients",
-                                    data: [3000, 5000,4000, 5500, 4000],
+                                    data: [3000, 5000, 4000, 5500, 4000],
                                     backgroundColor: "rgba(254,245,231, 0.5)",
                                     borderColor: "#f6b34a",
                                     borderWidth: 2,
@@ -671,7 +683,7 @@
                             }
                         }
                     });
-                }                
+                }
             });
         }
     }
@@ -684,8 +696,8 @@
     -------------------------------------------*/
     if ($(".recent-job-slider").length) {
         $(".recent-job-slider").owlCarousel({
-            smartSpeed:300,
-            items:1
+            smartSpeed: 300,
+            items: 1
         });
     }
 
@@ -696,21 +708,21 @@
     function uploadFile() {
         if ($(".careers-vacancy-page .inputfile").length) {
             var inputs = $(".inputfile");
-            Array.prototype.forEach.call(inputs, function(input) {
-                var label    = input.nextElementSibling,
+            Array.prototype.forEach.call(inputs, function (input) {
+                var label = input.nextElementSibling,
                     labelVal = label.innerHTML;
 
-                inputs.on("change", function(e) {
+                inputs.on("change", function (e) {
                     var fileName = '';
                     var $this = $(this);
 
-                    if( $this.files && $this.files.length > 1 ) {
-                        fileName = ( $this.arrt("data-multiple-caption") || "" ).replace("{count}", $this.files.length );
+                    if ($this.files && $this.files.length > 1) {
+                        fileName = ($this.arrt("data-multiple-caption") || "").replace("{count}", $this.files.length);
                     } else {
                         fileName = e.target.value.split("\\").pop();
                     }
 
-                    if( fileName ) {
+                    if (fileName) {
                         label.querySelector("span").innerHTML = fileName;
                     } else {
                         label.innerHTML = labelVal;
@@ -725,10 +737,10 @@
 
     /*------------------------------------------
         = GOOGLE MAP
-    -------------------------------------------*/  
+    -------------------------------------------*/
     function map() {
 
-        var myLatLng = new google.maps.LatLng(36.169941,-115.139830);
+        var myLatLng = new google.maps.LatLng(36.169941, -115.139830);
         var mapProp = {
             center: myLatLng,
             zoom: 11,
@@ -736,10 +748,10 @@
             mapTypeId: google.maps.MapTypeId.ROAD
         };
 
-        var map = new google.maps.Map(document.getElementById("map"),mapProp);
+        var map = new google.maps.Map(document.getElementById("map"), mapProp);
         var marker = new google.maps.Marker({
             position: myLatLng,
-            icon:'images/map-marker.png'
+            icon: 'images/map-marker.png'
         });
 
         marker.setMap(map);
@@ -827,12 +839,12 @@
                 }
             ]
         );
-    }; 
+    };
 
 
     /*------------------------------------------
         = CONTACT FORM SUBMISSION
-    -------------------------------------------*/  
+    -------------------------------------------*/
     if ($("#contact-form").length) {
         $("#contact-form").validate({
             rules: {
@@ -841,7 +853,7 @@
                     minlength: 2
                 },
                 email: "required",
-                
+
                 topic: {
                     required: true
                 }
@@ -862,34 +874,34 @@
     /*==========================================================================
         WHEN DOCUMENT LOADING 
     ==========================================================================*/
-        $(window).on('load', function() {
+    $(window).on('load', function () {
 
-            preloader();
+        preloader();
 
-            sortingGrids();
+        sortingGrids();
 
-            if ($(".map").length) {
-                map();
-            }
+        if ($(".map").length) {
+            map();
+        }
 
-            // Set FAQ section's two col equal height
-            if ($(".faq").length) {
-                setTwoColEqHeight($(".faq .left-col"), $(".faq .right-col"));
-            }
+        // Set FAQ section's two col equal height
+        if ($(".faq").length) {
+            setTwoColEqHeight($(".faq .left-col"), $(".faq .right-col"));
+        }
 
-            // Set About page mission section two col equal height
-            if ($(".about-company-s2 .mission .details").length) {
-                setTwoColEqHeight($(".about-company-s2 .mission .details .left-col"), $(".about-company-s2 .mission .details .right-col"));
-            }
+        // Set About page mission section two col equal height
+        if ($(".about-company-s2 .mission .details").length) {
+            setTwoColEqHeight($(".about-company-s2 .mission .details .left-col"), $(".about-company-s2 .mission .details .right-col"));
+        }
 
-        });
+    });
 
 
 
     /*==========================================================================
         WHEN WINDOW SCROLL
     ==========================================================================*/
-    $(window).on("scroll", function() {
+    $(window).on("scroll", function () {
 
         bgParallax();
 
