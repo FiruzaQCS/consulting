@@ -66,28 +66,28 @@
 
     .btn-wrapper .btn {
         background-color: transparent;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    font-size: 1.125rem;
-    font-weight: bold;
-    color: #f39c12;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    outline: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #f39c12;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        outline: none;
     }
 
- .btn-wrapper:before {
-    background-color: #fff;
-    content: "";
-    width: 146px;
-    height: 41px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-}
+    .btn-wrapper:before {
+        background-color: #fff;
+        content: "";
+        width: 146px;
+        height: 41px;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+    }
 </style>
 
 <body>
@@ -107,8 +107,8 @@
         </div>
         <!-- end preloader -->
 
-        <!-- Start header -->
-        <header class="site-header">
+         <!-- Start header -->
+         <header class="site-header">
             <!-- start upper-topbar -->
             <div class="upper-topbar">
                 <div class="container">
@@ -122,12 +122,11 @@
                         <div class="col col-md-4">
                             <div class="login-language">
                                 <div class="language">
-                                    <span>Lang: </span>
+                                    <span class="translate" data-key="lang">Lang: </span>
                                     <form>
-                                        <select class="selectpicker">
-                                            <option>ENG</option>
-                                            <option>TUK</option>
-                                            <option>SPH</option>
+                                        <select class="selectpicker" id="languageSelector">
+                                            <option value="en">ENG</option>
+                                            <option value="az">AZ</option>
                                         </select>
                                     </form>
                                 </div>
@@ -141,19 +140,20 @@
                 <div class="container">
                     <div class="row lower-topbar">
                         <div class="col col-sm-3">
-                            <a class="logo" href="index.html"><img src="images/Logo-QCS.png" alt class="img img-responsive"></a>
+                            <a class="logo" href="index.html"><img src="images/Logo-QCS.png" alt
+                                    class="img img-responsive"></a>
                         </div>
                         <div class="col col-sm-9">
                             <div class="company-info">
                                 <ul>
                                     <li>
                                         <span class="fi flaticon-pin"></span>
-                                        <h4>Location</h4>
+                                        <h4 class="translate" data-key="location">Location</h4>
                                         <span class="info">90 State Street Suite 700 Albany, New York, US, 12207</span>
                                     </li>
                                     <li>
                                         <span class="fi flaticon-technology"></span>
-                                        <h4>Request Call Back</h4>
+                                        <h5 class="translate" data-key="callback">Request Call Back</h5>
                                         <span class="info">+994 50 389 79 33</span>
                                     </li>
                                 </ul>
@@ -176,12 +176,13 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="current"><a href="services.html">Services</a></li>
-                            <li><a href="about.html">About us</a></li>
-                            <li><a href="publications.html">Publications</a></li>
-                            <li><a href="membership.html">Membership</a></li>
-                            <li><a href="index.html">Contact</a></li>
+                            <li><a class="translate" data-key="home" href="index.html">Home</a>
+                            </li>
+                            <li class="current"><a class="translate" data-key="service" href="services.html">Services</a></li>
+                            <li><a class="translate" data-key="about" href="about.html">About us</a></li>
+                            <li><a class="translate" data-key="publication" href="publications.html">Publications</a></li>
+                            <li><a class="translate" data-key="membership" href="membership.html">Membership</a></li>
+                            <li><a class="translate" data-key="contact" href="index.html">Contact</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
 
@@ -201,9 +202,9 @@
                     <h1>Training & Development
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="services.html">Services</a></li>
-                        <li>Training & Development</li>
+                        <li><a class="translate" data-key="home" href="index.html">Home</a></li>
+                        <li><a class="translate" data-key="service" href="services.html">Services</a></li>
+                        <li class="translate" data-key="training-box">Training & Development</li>
                     </ol>
                 </div>
             </div> <!-- end container -->
@@ -213,12 +214,12 @@
             <div class="container">
                 <div class="row">
                     <div class="col col-lg-9 col-md-8">
-                        <div class="section-title row"  style="margin: 0 !important;">
+                        <div class="section-title row" style="margin: 0 !important;">
                             <div class="col col-xs-12">
-                                <h2>About Training & Development</h2>
+                                <h2 class="translate" data-key="about-training">About Training & Development</h2>
                             </div>
                         </div> <!-- end section-title -->
-<hr>
+                        <hr>
                         <div class="row">
                             <div class="col col-xs-12 about-company-s2-slider-wrapper">
                                 <div class="about-company-s2-slider">
@@ -229,7 +230,7 @@
                                         <img src="images/about-slider/img-2.jpg" alt>
                                     </div>
                                 </div>
-                                <p> Our seminars and trainings are developed by industry experts to help organizations
+                                <p class="translate" data-key="about-training-desc"> Our seminars and trainings are developed by industry experts to help organizations
                                     and individuals improve their competence and expand their professional skills – the
                                     main components of sustainable business development and competitiveness.
                                 </p>
@@ -241,13 +242,13 @@
                             <div class="title row">
                                 <div class="col col-md-4">
                                     <div class="section-title" style="margin: 0 !important;">
-                                        <h2 style="line-height: 1;">Management Systems
+                                        <h2 class="translate" data-key="managment-title" style="line-height: 1;">Management Systems
                                             <br> Standards Trainings
                                         </h2>
                                     </div>
                                 </div>
                                 <div class="col col-md-8">
-                                    <p>
+                                    <p class="translate" data-key="managment-desc">
                                         Management Systems Standards Trainings
                                         QCS LLC trainings in management systems and management standards will give you a
                                         thorough understanding of how management systems and related standards can be
@@ -258,37 +259,49 @@
                             <div class="row details">
                                 <div class="col col-md-5 left-col">
                                     <ul>
-                                        <li><i class="fa fa-chevron-circle-right"></i>ISO 9001:2015 Awareness
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-1"></i>ISO 9001:2015 Awareness
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i> ISO 9001:2015 Internal auditor
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-2"></i> ISO 9001:2015 Internal auditor
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i>ISO 9001:2015 Lead auditor
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-3"></i>ISO 9001:2015 Lead auditor
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i> ISO 14001:2015 Awareness
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-4"></i> ISO 14001:2015 Awareness
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i>ISO 14001:2015 Internal auditor
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-5"></i>ISO 14001:2015 Internal auditor
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i> ISO 14001:2015 Lead auditor</li>
-                                        <li><i class="fa fa-chevron-circle-right"></i> ISO 45001:2018 Awareness
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-6"></i> ISO 14001:2015 Lead auditor</li>
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-8"></i> ISO 45001:2018 Awareness
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i> ISO 45001:2018 Internal auditor
+                                    </ul>
+                                </div>
+                                <div class="col col-md-7 right-col">
+                                    <div style="width: 100%; height: 100%;">
+                                        <img style="width: 100%; height: 100%;" src="images/about-slider/img-2.jpg" alt>
+                                    </div>
+                                </div>
+                            </div>
+                            <hr>
+                            <div class="row details">
+                                <div class="col col-md-5 left-col">
+                                    <ul>
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-9"></i> ISO 45001:2018 Internal auditor
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i> ISO 45001:2018 Lead auditor
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-10"></i> ISO 45001:2018 Lead auditor
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i>Basic Fire Safety
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-11"></i>Basic Fire Safety
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i>Fire Warden
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-12"></i>Fire Warden
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i>Basic First Aid
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-13"></i>Basic First Aid
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i>Project management Fundamentals
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-14"></i>Project management Fundamentals
                                         </li>
-                                        <li><i class="fa fa-chevron-circle-right"></i>Integrated Management System (IMS)
+                                        <li><i class="fa fa-chevron-circle-right translate" data-key="list-15"></i>Integrated Management System (IMS)
                                             implementation
                                         </li>
                                     </ul>
                                 </div>
-                                <div class="col col-md-7 right-col"" style=" height: 0 !important"">
+                                <div class="col col-md-7 right-col">
                                     <div style="width: 100%; height: 100%;">
                                         <img style="width: 100%; height: 100%;" src="images/about-slider/img-2.jpg" alt>
                                     </div>
@@ -306,10 +319,10 @@
                                     </div>
                                 </div>
                                 <div class="col col-md-7">
-                                    <p>
+                                    <p class="translate" data-key="benefit-desc">
                                         Our trainings can be delivered in any mode which suitable for you:</p>
-                                        <br>
-                                    <h4>
+                                    <br>
+                                    <h4 class="translate" data-key="freeConsult">
                                         Request Free Consultation
                                     </h4>
                                 </div>
@@ -318,47 +331,42 @@
                             <div class="row details">
                                 <div class="col col-md-5 left-col">
                                     <ul>
-                                        <li><i class="fa fa-chevron-circle-right"></i>On-site
+                                        <li><i data-key="onsite" class="fa fa-chevron-circle-right translate"></i>On-site
                                         </li>
                                         <hr>
-                                        <li><i class="fa fa-chevron-circle-right"></i> Classroom
+                                        <li><i data-key="classrom" class="fa fa-chevron-circle-right translate"></i> Classroom
                                         </li>
                                         <hr>
-                                        <li><i class="fa fa-chevron-circle-right"></i>Online
+                                        <li><i data-key="online" class="fa fa-chevron-circle-right translate"></i>Online
                                         </li>
                                     </ul>
                                 </div>
                                 <div class="col col-md-7 right-col contact-block" style="height: 284px;">
-
                                     <div class="contact-form">
-                                        <form class="form"  id="contact-form" action="https://formspree.io/f/xyyqpzlr">
+                                        <form class="form" id="contact-form" action="https://formspree.io/f/xyyqpzlr" novalidate="novalidate">
                                             <div style="margin-bottom: 20px;">
-                                                <input type="text" name="name" class="form-control"
-                                                    placeholder="Full Name">
+                                                <input type="text" name="name" class="form-control translate"  data-key="input-fullname" placeholder="Full Name">
                                             </div>
                                             <div style="margin-bottom: 20px;">
-                                                <input type="email" name="email" class="form-control"
-                                                    placeholder="Email">
+                                                <input type="email" name="email" class="form-control translate"  data-key="input-email" placeholder="Email">
                                             </div>
                                             <div style="margin-bottom: 20px;">
-                                                <input type="text" name="text" class="form-control"
-                                                    placeholder="Subject">
+                                                <input type="text" name="text" class="form-control translate"  data-key="input-subject" placeholder="Subject">
                                             </div>
                                             <div style="margin-bottom: 20px;">
-                                                <textarea class="form-control" name="message"
-                                                    placeholder="Message"></textarea>
+                                                <textarea class="form-control" name="message translate"  data-key="input-message" placeholder="Message"></textarea>
                                             </div>
                                             <div class="submit-btn">
                                                 <div class="btn-wrapper">
-                                                    <button type="submit" class="btn">Submit</button>
+                                                    <button type="submit" class="btn translate" data-key="submit-button">Submit</button>
                                                     <span id="loader">
                                                         <img src="images/contact-ajax-loader.gif" alt="Loader">
                                                     </span>
                                                 </div>
                                             </div>
                                             <div class="col col-md-12 error-handling-messages">
-                                                <div id="success">Thank you</div>
-                                                <div id="error"> Error occurred while sending email. Please try again
+                                                <div id="success" class="translate" data-key="msj-success">Thank you</div>
+                                                <div id="error" class="translate" data-key="msj-failed"> Error occurred while sending email. Please try again
                                                     later.
                                                 </div>
                                             </div>
@@ -375,17 +383,17 @@
                             <div class="widget">
                                 <div class="link-widget">
                                     <ul>
-                                        <li><a href="service3.html">Audit & Certification</a></li>
-                                        <li><a href="service2.html">Software Solutions</a></li>
-                                        <li class="active"><a href="service1.html">Training & Development</a></li>
+                                        <li><a class="translate" data-key="audit-box" href="service3.html">Audit & Certification</a></li>
+                                        <li><a class="translate" data-key="solution-box" href="service2.html">Software Solutions</a></li>
+                                        <li class="active"><a  class="translate" data-key="training-box" href="service1.html">Training & Development</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="widget news-letter-widget">
-                                <h4 style="margin: 0;">Have Enquiry</h4>
-                                <p>Contact with us through our representative or submit a business inquiry online</p>
+                                <h4 class="translate" data-key="enquiry" style="margin: 0;">Have Enquiry</h4>
+                                <p class="translate" data-key="enquiry-desc">Contact with us through our representative or submit a business inquiry online</p>
                                 <div>
-                                    <button class="btn"><a href="index.html#contact">Contact us</a></button>
+                                    <button class="btn translate" data-key="contactus"><a href="index.html#contact">Contact us</a></button>
                                 </div>
                             </div>
                         </div>
@@ -494,45 +502,45 @@
     <script src="http://maps.googleapis.com/maps/api/js?key="></script>
     <!-- Custom script for this template -->
     <script src="js/script.js"></script>
+<script src="js/lang.js"></script>
+    <!-- //contact form -->
+    <script>
+        document.addEventListener("DOMContentLoaded", function () {
+            const contactForm = document.getElementById("contact-form");
 
-        <!-- //contact form -->
-        <script>
-            document.addEventListener("DOMContentLoaded", function () {
-                const contactForm = document.getElementById("contact-form");
-    
-                contactForm.addEventListener("submit", function (e) {
-                    e.preventDefault(); // Prevent the default form submission
-                    // Get form data
-                    const formData = new FormData(contactForm);
-    
-                    // Create a URL for the external service (e.g., Formspree)
-                    const formEndpoint = "https://formspree.io/f/moqolvzv";
-    
-                    // Send a POST request with the form data
-                    fetch(formEndpoint, {
-                        method: "POST",
-                        body: formData,
-                        headers: {
-                            Accept: "application/json",
-                        },
+            contactForm.addEventListener("submit", function (e) {
+                e.preventDefault(); // Prevent the default form submission
+                // Get form data
+                const formData = new FormData(contactForm);
+
+                // Create a URL for the external service (e.g., Formspree)
+                const formEndpoint = "https://formspree.io/f/moqolvzv";
+
+                // Send a POST request with the form data
+                fetch(formEndpoint, {
+                    method: "POST",
+                    body: formData,
+                    headers: {
+                        Accept: "application/json",
+                    },
+                })
+                    .then((response) => response.json())
+                    .then((data) => {
+                        // Handle the response (e.g., show a thank you message)
+                        console.log(data);
+                        alert("Message sent successfully!");
+                        contactForm.reset();
                     })
-                        .then((response) => response.json())
-                        .then((data) => {
-                            // Handle the response (e.g., show a thank you message)
-                            console.log(data);
-                            alert("Message sent successfully!");
-                            contactForm.reset();
-                        })
-                        .catch((error) => {
-                            // Handle errors (e.g., display an error message)
-                            console.error(error);
-                            alert("An error occurred while sending the message.");
-                        });
-                });
+                    .catch((error) => {
+                        // Handle errors (e.g., display an error message)
+                        console.error(error);
+                        alert("An error occurred while sending the message.");
+                    });
             });
-    
-        </script>
-    
+        });
+
+    </script>
+
 
 </body>
 
