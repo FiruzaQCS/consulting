@@ -19,7 +19,7 @@ $(document).ready(function () {
     // Get the selected language from localStorage
     var selectedLang = localStorage.getItem("selectedLanguage");
     if (selectedLang) {
-      $("#languageSelector").val(selectedLang);
+      $("#languageSelector").val(selectedLang).change(); // Set the value and trigger the change event
     }
   
     // Get the name from the URL
@@ -41,4 +41,3 @@ $(document).ready(function () {
       updateLanguage(selectedLang, name);
     });
   });
-  
