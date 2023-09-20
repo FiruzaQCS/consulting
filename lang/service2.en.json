@@ -1,0 +1,25 @@
+{
+    "location": "LOCATION",
+    "callback": "Request Call Back",
+    "lang": "Lang",
+    "home": "HOME",
+    "service": "SERVICES",
+    "about": "ABOUT",
+    "publication": "PUBLICATIONS",
+    "membership": "MEMBERSHIP",
+    "contact": "CONTACT",
+
+
+    "training-box": "Training & Development",
+    "solution-box": "Software Solution",
+    "audit-box": "Audit & Certification",
+    "freeConsult": "Request Free Consultation",
+    "enquiry": "Have Enquiry",
+    "enquiry-desc": "Contact with us through our representative or submit a business inquiry online",
+    "links": "LINKS",
+    "socialMedia": "SOCIAL MEDIA",
+    "qcs-footer-desc": "QCS LLC is an independent non-governmental organization dedicated to promoting sustainable certification, auditing, inspection, consulting, training and educational services.",
+    "openingHours": "OPENING HOURS",
+    "hours": "Mon - Fri: 9 am - 7 pm",
+    "allRights": "2023 © All rights reserved by QCS.AZ"
+}
