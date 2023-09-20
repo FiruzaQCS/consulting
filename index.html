@@ -99,12 +99,11 @@
                         <div class="col col-md-4">
                             <div class="login-language">
                                 <div class="language">
-                                    <span>Lang: </span>
+                                    <span class="translate" data-key="lang">Lang: </span>
                                     <form>
-                                        <select class="selectpicker">
-                                            <option>ENG</option>
-                                            <option>TUK</option>
-                                            <option>SPH</option>
+                                        <select class="selectpicker" id="languageSelector">
+                                            <option value="en">ENG</option>
+                                            <option value="az">AZ</option>
                                         </select>
                                     </form>
                                 </div>
@@ -126,12 +125,12 @@
                                 <ul>
                                     <li>
                                         <span class="fi flaticon-pin"></span>
-                                        <h4>Location</h4>
+                                        <h4 class="translate" data-key="location">Location</h4>
                                         <span class="info">90 State Street Suite 700 Albany, New York, US, 12207</span>
                                     </li>
                                     <li>
                                         <span class="fi flaticon-technology"></span>
-                                        <h4>Request Call Back</h4>
+                                        <h5 class="translate" data-key="callback">Request Call Back</h5>
                                         <span class="info">+994 50 389 79 33</span>
                                     </li>
                                 </ul>
@@ -154,12 +153,13 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
                         <ul class="nav navbar-nav">
-                            <li class="current"><a href="#home">Home</a></li>
-                            <li><a href="#services">Services</a></li>
-                            <li><a href="#about">About us</a></li>
-                            <li><a href="#publication">Publications</a></li>
-                            <li><a href="#membership">Membership</a></li>
-                            <li><a href="#contact">Contact</a></li>
+                            <li class="current translate"><a class="translate" data-key="home" href="#home">Home</a>
+                            </li>
+                            <li><a class="translate" data-key="service" href="#services">Services</a></li>
+                            <li><a class="translate" data-key="about" href="#about">About us</a></li>
+                            <li><a class="translate" data-key="publication" href="#publication">Publications</a></li>
+                            <li><a class="translate" data-key="membership" href="#membership">Membership</a></li>
+                            <li><a class="translate" data-key="contact" href="#contact">Contact</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
 
@@ -178,8 +178,41 @@
             <div class="tp-banner-container">
                 <div class="tp-banner">
                     <ul>
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000"
-                            data-thumb="images/slider/slider-1.jpg" data-title="We are Consult Care">
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000">
+                            <!-- MAIN IMAGE -->
+                            <img src="images/slider/slider-1.jpg" alt="newslide2014_1" data-bgposition="center top"
+                                data-bgfit="cover" data-bgrepeat="no-repeat">
+                            <!-- LAYERS -->
+
+                            <!-- LAYER NR. 1 -->
+                            <div class="tp-caption main-heading customin customout" data-x="25" data-y="210"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="1800" data-start="500" data-easing="Power3.easeInOut" data-splitin="chars"
+                            data-splitout="chars" data-elementdelay="0.08" data-endelementdelay="0.08"
+                            data-end="8000" data-endspeed="500" style="z-index: 2;">
+                            <h1 class="translate" data-key="qcs-header"></h1>
+                            </div>
+                            <!-- LAYER NR. 2 -->
+                            <div class="tp-caption slider-text rs-parallaxlevel-0 translate" data-x="25" data-y="460"
+                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                                data-speed="2000" data-start="3300" data-easing="Power3.easeInOut" data-splitin="none"
+                                data-splitout="none" data-end="9000" data-endspeed="2000" data-linktoslide="next"
+                                style="z-index: 8;" data-key="qcs-desc"> </div>
+
+                            <!-- LAYER NR. 3 -->
+                            <div class="tp-caption lfb ltt" data-x="25" data-y="570" data-speed="1800" data-start="4500"
+                                data-easing="Power4.easeOut" data-splitin="none" data-splitout="none"
+                                data-elementdelay="0.01" data-endelementdelay="0.1" data-end="11000"
+                                data-endspeed="1800" data-endeasing="Power4.easeOut" style="z-index: 3;">
+                                <div class="link-button hidden-xs">
+                                    <a href="about.html" class="btn slider-btn translate" data-key="about"></a>
+                                    <a href="contact.html" class="btn slider-btn translate" data-key="contact"></a>
+                                </div> <!-- link-button -->
+                            </div>
+                        </li>
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000">
                             <!-- MAIN IMAGE -->
                             <img src="images/slider/slider-1.jpg" alt="newslide2014_1" data-bgposition="center top"
                                 data-bgfit="cover" data-bgrepeat="no-repeat">
@@ -192,20 +225,15 @@
                                 data-speed="1800" data-start="500" data-easing="Power3.easeInOut" data-splitin="chars"
                                 data-splitout="chars" data-elementdelay="0.08" data-endelementdelay="0.08"
                                 data-end="8000" data-endspeed="500" style="z-index: 2;">
-                                <h1>QCS LLC<br> Management Systems <br> Certification Body</h1>
+                                <h1 class="translate" data-key="qcs-header"></h1>
                             </div>
-
-
                             <!-- LAYER NR. 2 -->
-                            <div class="tp-caption slider-text rs-parallaxlevel-0" data-x="25" data-y="460"
+                            <div class="tp-caption slider-text rs-parallaxlevel-0 translate" data-x="25" data-y="460"
                                 data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
                                 data-speed="2000" data-start="3300" data-easing="Power3.easeInOut" data-splitin="none"
                                 data-splitout="none" data-end="9000" data-endspeed="2000" data-linktoslide="next"
-                                style="z-index: 8;"> QCS LLC is an independent non-governmental organization dedicated
-                                to promoting sustainable certification,
-                                <br> auditing, inspection, training and IT solutions services.
-                            </div>
+                                style="z-index: 8;" data-key="qcs-desc-2"> </div>
 
                             <!-- LAYER NR. 3 -->
                             <div class="tp-caption lfb ltt" data-x="25" data-y="570" data-speed="1800" data-start="4500"
@@ -213,51 +241,45 @@
                                 data-elementdelay="0.01" data-endelementdelay="0.1" data-end="11000"
                                 data-endspeed="1800" data-endeasing="Power4.easeOut" style="z-index: 3;">
                                 <div class="link-button hidden-xs">
-                                    <a href="about.html" class="btn slider-btn">About us</a>
-                                    <a href="contact.html" class="btn slider-btn">Contact</a>
+                                    <a href="about.html" class="btn slider-btn translate" data-key="about"></a>
+                                    <a href="contact.html" class="btn slider-btn translate" data-key="contact"></a>
                                 </div> <!-- link-button -->
                             </div>
                         </li>
-                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000"
-                            data-thumb="images/slider/slider-1.jpg" data-title="We are Consult Care">
-                            <!-- MAIN IMAGE -->
-                            <img src="images/slider/slider-1.jpg" alt="newslide2014_1" data-bgposition="center top"
-                                data-bgfit="cover" data-bgrepeat="no-repeat">
-                            <!-- LAYERS -->
+                        <li data-transition="fade" data-slotamount="7" data-masterspeed="1000" data-delay="10000">
+                        <!-- MAIN IMAGE -->
+                        <img src="images/slider/slider-1.jpg" alt="newslide2014_1" data-bgposition="center top"
+                            data-bgfit="cover" data-bgrepeat="no-repeat">
+                        <!-- LAYERS -->
 
-                            <!-- LAYER NR. 1 -->
-                            <div class="tp-caption main-heading customin customout" data-x="25" data-y="210"
-                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                data-speed="1800" data-start="500" data-easing="Power3.easeInOut" data-splitin="chars"
-                                data-splitout="chars" data-elementdelay="0.08" data-endelementdelay="0.08"
-                                data-end="8000" data-endspeed="500" style="z-index: 2;">
-                                <h1>QCS LLC<br> Management Systems <br> Certification Body</h1>
-                            </div>
+                        <!-- LAYER NR. 1 -->
+                        <div class="tp-caption main-heading customin customout" data-x="25" data-y="210"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="1800" data-start="500" data-easing="Power3.easeInOut" data-splitin="chars"
+                            data-splitout="chars" data-elementdelay="0.08" data-endelementdelay="0.08"
+                            data-end="8000" data-endspeed="500" style="z-index: 2;">
+                            <h1 class="translate" data-key="qcs-header"></h1>
+                        </div>
+                        <!-- LAYER NR. 2 -->
+                        <div class="tp-caption slider-text rs-parallaxlevel-0 translate" data-x="25" data-y="460"
+                            data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
+                            data-speed="2000" data-start="3300" data-easing="Power3.easeInOut" data-splitin="none"
+                            data-splitout="none" data-end="9000" data-endspeed="2000" data-linktoslide="next"
+                            style="z-index: 8;" data-key="qcs-desc-3"> </div>
 
-
-                            <!-- LAYER NR. 2 -->
-                            <div class="tp-caption slider-text rs-parallaxlevel-0" data-x="25" data-y="460"
-                                data-customin="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                data-customout="x:0;y:0;z:0;rotationX:0;rotationY:0;rotationZ:0;scaleX:0;scaleY:0;skewX:0;skewY:0;opacity:0;transformPerspective:600;transformOrigin:50% 50%;"
-                                data-speed="2000" data-start="3300" data-easing="Power3.easeInOut" data-splitin="none"
-                                data-splitout="none" data-end="9000" data-endspeed="2000" data-linktoslide="next"
-                                style="z-index: 8;"> QCS LLC is an independent non-governmental organization dedicated
-                                to promoting sustainable certification,
-                                <br> auditing, inspection, training and IT solutions services.
-                            </div>
-
-                            <!-- LAYER NR. 3 -->
-                            <div class="tp-caption lfb ltt" data-x="25" data-y="570" data-speed="1800" data-start="4500"
-                                data-easing="Power4.easeOut" data-splitin="none" data-splitout="none"
-                                data-elementdelay="0.01" data-endelementdelay="0.1" data-end="11000"
-                                data-endspeed="1800" data-endeasing="Power4.easeOut" style="z-index: 3;">
-                                <div class="link-button hidden-xs">
-                                    <a href="about.html" class="btn slider-btn">About us</a>
-                                    <a href="contact.html" class="btn slider-btn">Contact</a>
-                                </div> <!-- link-button -->
-                            </div>
-                        </li>
+                        <!-- LAYER NR. 3 -->
+                        <div class="tp-caption lfb ltt" data-x="25" data-y="570" data-speed="1800" data-start="4500"
+                            data-easing="Power4.easeOut" data-splitin="none" data-splitout="none"
+                            data-elementdelay="0.01" data-endelementdelay="0.1" data-end="11000"
+                            data-endspeed="1800" data-endeasing="Power4.easeOut" style="z-index: 3;">
+                            <div class="link-button hidden-xs">
+                                <a href="about.html" class="btn slider-btn translate" data-key="about"></a>
+                                <a href="contact.html" class="btn slider-btn translate" data-key="contact"></a>
+                            </div> <!-- link-button -->
+                        </div>
+                    </li>
                     </ul>
                 </div>
             </div>
@@ -269,8 +291,9 @@
             <div class="container">
                 <div class="row section-title">
                     <div class="col col-md-8 col-md-offset-2">
-                        <h2>Services We Provide</h2>
-                        <p>We provide software solutions – Quality Assurance, OH&S and Enviromental Management systems
+                        <h2 class="translate" data-key="services-header">Services We Provide</h2>
+                        <p class="translate" data-key="services-desc">We provide software solutions – Quality Assurance,
+                            OH&S and Enviromental Management systems
                             related web applications & other products for individual company processes.</p>
                     </div>
                 </div> <!-- end section-title -->
@@ -283,8 +306,9 @@
                                 <span class="icon">
                                     <i class="fi flaticon-letter"></i>
                                 </span>
-                                <h3>Audit & Certification</h3>
-                                <p>ISO certification is proof from a third party, that you comply with one or more ISO
+                                <h3 class="translate" data-key="audit-box">Audit & Certification</h3>
+                                <p class="translate" data-key="audit-box-desc">ISO certification is proof from a third
+                                    party, that you comply with one or more ISO
                                     management standards...</p>
                             </div>
                         </div>
@@ -296,8 +320,9 @@
                                 <span class="icon">
                                     <i class="fi flaticon-network"></i>
                                 </span>
-                                <h3>Software Solution</h3>
-                                <p>LORDS software: the program that allows any organization to implement an occupational
+                                <h3 class="translate" data-key="solution-box">Software Solution</h3>
+                                <p class="translate" data-key="solution-box-desc">LORDS software: the program that
+                                    allows any organization to implement an occupational
                                     health...</p>
                             </div>
                         </div>
@@ -309,15 +334,16 @@
                                 <span class="icon">
                                     <i class="fi flaticon-people"></i>
                                 </span>
-                                <h3>Training & Development</h3>
-                                <p>The nonprofit, government and higher education sectors play a significant...</p>
+                                <h3 class="translate" data-key="training-box">Training & Development</h3>
+                                <p class="translate" data-key="training-box-desc">The nonprofit, government and higher
+                                    education sectors play a significant...</p>
                             </div>
                         </div>
                     </div>
                 </div> <!-- end row -->
                 <div class="row section-more">
                     <div class="col-md-12">
-                        <a href="services.html" class="btn theme-btn">View More</a>
+                        <a href="services.html" class="btn theme-btn translate" data-key="viewmore-button">View More</a>
                     </div>
                 </div>
             </div> <!-- end container -->
@@ -327,17 +353,20 @@
         <section class="about-us-section about-us-section-style2 section-padding" id="about">
             <div class="container">
                 <div class="row section-title">
-                    <h2>About company</h2>
+                    <h2 class="translate" data-key="about-header">About company</h2>
                 </div> <!-- end section-title -->
 
                 <div class="row content">
                     <div class="col col-md-7">
                         <div class="box">
-                            <h3>We advise global leaders on their most critical issues and opportunities</h3>
-                            <p>Established in the year 2016, QCS LLC is an officially Accredited Certification Body
+                            <h3 class="translate" data-key="about-title">We advise global leaders on their most critical
+                                issues and opportunities</h3>
+                            <p class="translate" data-key="about-desc">Established in the year 2016, QCS LLC is an
+                                officially Accredited Certification Body
                                 providing certification services against ISO standards, including ISO 9001, ISO 14001,
                                 ISO 45001, ISO 22000, ISO 39001 etc.</p>
-                            <p>We work with only the most reputable registrars to ensure your certification has the
+                            <p class="translate" data-key="about-desc-sub">We work with only the most reputable
+                                registrars to ensure your certification has the
                                 proper national and international recognition for your industry.</p>
                         </div>
                     </div>
@@ -345,7 +374,7 @@
 
                 <div class="row section-more">
                     <div class="col-md-12">
-                        <a href="about.html" class="btn theme-btn">View More</a>
+                        <a href="about.html" class="btn theme-btn translate" data-key="viewmore-button">View More</a>
                     </div>
                 </div>
             </div> <!-- end container -->
@@ -357,8 +386,9 @@
             <div class="container">
                 <div class="row section-title">
                     <div class="col col-md-8 col-md-offset-2">
-                        <h2>Publications</h2>
-                        <p>Our highly customized teams bring each client a combination of deep industry knowledge and
+                        <h2 class="translate" data-key="publication-header">Publications</h2>
+                        <p class="translate" data-key="publication-desc">Our highly customized teams bring each client a
+                            combination of deep industry knowledge and
                             expertperspectives from other industries on the challenge at stake.</p>
                     </div>
                 </div> <!-- end section-title -->
@@ -369,8 +399,10 @@
                             <div class="icon">
                                 <i class="fi flaticon-money-1"></i>
                             </div>
-                            <h3>Audits & Certification procedure (Extraction)</h3>
-                            <p>Purpose of this procedure is to ensure that audit and certification processes are
+                            <h3 class="translate" data-key="audit-pub">Audits & Certification procedure (Extraction)
+                            </h3>
+                            <p class="translate" data-key="audit-pub-desc">Purpose of this procedure is to ensure that
+                                audit and certification processes are
                                 implemented according to requirements of ISO 17021-1 International Standard</p>
                         </div>
                     </div>
@@ -379,8 +411,9 @@
                             <div class="icon">
                                 <i class="fi flaticon-money"></i>
                             </div>
-                            <h3>QCS Anti-Corruption Policy Statement</h3>
-                            <p>QCS states that bribery, corruption and anti-money laundering are criminal offences and
+                            <h3 class="translate" data-key="anti-pub">QCS Anti-Corruption Policy Statement</h3>
+                            <p class="translate" data-key="anti-pub">QCS states that bribery, corruption and anti-money
+                                laundering are criminal offences and
                                 punishable for individuals by imprisonment</p>
                         </div>
                     </div>
@@ -389,8 +422,9 @@
                             <div class="icon">
                                 <i class="fi flaticon-graphic"></i>
                             </div>
-                            <h3>QCS Impartiality Policy Statement</h3>
-                            <p>QCS states that partiality in audit execution and certification award processes is
+                            <h3 class="translate" data-key="policy-pub">QCS Impartiality Policy Statement</h3>
+                            <p class="translate" data-key="policy-pub-desc">QCS states that partiality in audit
+                                execution and certification award processes is
                                 criminal offence and punishable for individuals by a fine and dismissal and even
                                 imprisonment in cases stipulated by legislation</p>
                         </div>
@@ -398,7 +432,7 @@
                 </div> <!-- end row -->
                 <div class="row section-title">
                     <div class="col-md-12">
-                        <a href="publications.html" class="btn theme-btn">View More</a>
+                        <a href="publications.html" class="btn theme-btn translate" data-key="viewmore-button">View More</a>
                     </div>
                 </div>
             </div> <!-- end container -->
@@ -410,15 +444,18 @@
             <div class="container">
                 <div class="row section-title">
                     <div class="col col-md-8 col-md-offset-2">
-                        <h2>Membership</h2>
-                        <p style="color:#fff;font-weight: bold;">Build your organization’s culture of quality with the
+                        <h2 class="translate" data-key="memmber-header">Membership</h2>
+                        <p class="translate" data-key="memmber-title" style="color:#fff;font-weight: bold;">Build your
+                            organization’s culture of quality with the
                             support of QCS LLC
                         </p>
                         <br>
-                        <p style="color:#fff">Our membership is open to all organizations regardless of type, size or
+                        <p class="translate" data-key="memmber-desc" style="color:#fff">Our membership is open to all
+                            organizations regardless of type, size or
                             nature. QCS LLC membership gives you a wide range of opportunities at the best price:</p>
                         <br>
-                        <a href="membership.html" class="btn theme-btn">Apply</a>
+                        <a data-key="apply-button" href="membership.html"
+                            class="btn theme-btn translate" data-key="apply-button">Apply</a>
                     </div>
                 </div> <!-- end row -->
                 <div class="row content services-grids">
@@ -433,9 +470,11 @@
                 <div class="container contact-block" data-style="0">
                     <div class="row">
                         <div class="col col-xs-12">
-                            <h2>Get in touch and make appointment with our consultants</h2>
+                            <h2 class="translate" data-key="contact-header">Get in touch and make appointment with our
+                                consultants</h2>
                             <div class="contact-info">
-                                <p>You can write here inquiries, complaints, suggestions and observations. Each email
+                                <p class="translate" data-key="contact-desc">You can write here inquiries, complaints,
+                                    suggestions and observations. Each email
                                     will be reviewed and responded within 24 hours</p>
                                 <ul>
                                     <li>
@@ -463,27 +502,33 @@
                                 <form class="form" id="contact-form" action="https://formspree.io/f/xyyqpzlr"
                                     method="Post">
                                     <div>
-                                        <input type="text" name="name" class="form-control" placeholder="Full Name">
+                                        <input type="text" name="name" class="form-control translate"
+                                            data-key="input-fullname" placeholder="Full Name">
                                     </div>
                                     <div>
-                                        <input type="email" name="email" class="form-control" placeholder="Email">
+                                        <input type="email" name="email" class="form-control translate"
+                                            data-key="input-email" placeholder="Email">
                                     </div>
                                     <div>
-                                        <input type="text" name="text" class="form-control" placeholder="Subject">
+                                        <input type="text" name="text" class="form-control  translate"
+                                            data-key="input-subject" placeholder="Subject">
                                     </div>
                                     <div>
-                                        <textarea class="form-control" name="message" placeholder="Message"></textarea>
+                                        <textarea class="form-control translate" data-key="input-message" name="message"
+                                            placeholder="Message"></textarea>
                                     </div>
                                     <div class="submit-btn">
                                         <div class="btn-wrapper">
-                                            <button type="submit" class="btn">Submit</button>
+                                            <button type="submit" class="btn translate"
+                                                data-key="submit-button">Submit</button>
                                             <span id="loader"><img src="images/contact-ajax-loader.gif"
                                                     alt="Loader"></span>
                                         </div>
                                     </div>
                                     <div class="col col-md-12 error-handling-messages">
-                                        <div id="success">Thank you</div>
-                                        <div id="error"> Error occurred while sending email. Please try again later.
+                                        <div id="success" class="translate" data-key="msj-success">Thank you</div>
+                                        <div id="error" class="translate" data-key="msj-failed"> Error occurred while
+                                            sending email. Please try again later.
                                         </div>
                                     </div>
                                 </form>
@@ -503,7 +548,7 @@
                             <div class="widget about-widget">
                                 <a href="index.html" class="footer-logo"><img src="images/Logo-QCS.png" alt
                                         class="img img-responsive"></a>
-                                <p>
+                                <p class="translate" data-key="qcs-footer-desc">
                                     QCS LLC is an independent non-governmental organization dedicated to promoting
                                     sustainable certification, auditing, inspection, consulting, training and
                                     educational services.
@@ -512,24 +557,24 @@
                                     <span class="icon">
                                         <i class="fi flaticon-time"></i>
                                     </span>
-                                    <h4>Opening hours</h4>
-                                    <span class="time">Mon - Fri: 9 am - 7 pm</span>
+                                    <h4 class="translate" data-key="openingHours">Opening hours</h4>
+                                    <span class="time translate" data-key="hours">Mon - Fri: 9 am - 7 pm</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget newsletter-widget" style="text-align: center;">
-                                <h3>Services</h3>
+                                <h3 class="translate" data-key="service">Services</h3>
                                 <ul>
-                                    <li>
+                                    <li class="translate" data-key="audit-box">
                                         Audit & Certification
                                     </li>
                                     <hr>
-                                    <li>
+                                    <li class="translate" data-key="solution-box">
                                         Software Solutions
                                     </li>
                                     <hr>
-                                    <li>
+                                    <li class="translate" data-key="training-box">
                                         Training & Development
                                     </li>
                                 </ul>
@@ -537,20 +582,22 @@
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget site-map-widget" style="text-align: center;">
-                                <h3>Links</h3>
+                                <h3 class="translate" data-key="links">Links</h3>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="publications.html">Publications</a></li>
-                                    <li><a href="membership.html">Membership</a></li>
-                                    <li><a href="index.html">Contact</a></li>
+                                    <li><a class="translate" data-key="home" href="index.html">Home</a></li>
+                                    <li><a class="translate" data-key="service" href="services.html">Services</a></li>
+                                    <li><a class="translate" data-key="about" href="about.html">About</a></li>
+                                    <li><a class="translate" data-key="publication"
+                                            href="publications.html">Publications</a></li>
+                                    <li><a class="translate" data-key="membership" href="membership.html">Membership</a>
+                                    </li>
+                                    <li><a class="translate" data-key="contact" href="index.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget social-media-widget">
-                                <h3>Social media</h3>
+                                <h3 class="translate" data-key="socialMedia">Social media</h3>
                                 <ul class="">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -565,7 +612,8 @@
             <div class="copyright">
                 <div class="container">
                     <div class="col col-md-6">
-                        <p>2023 &copy; All rights reserved by <a href="index.html">QCS.AZ</a></p>
+                        <p class="translate" data-key="allRights">2023 &copy; All rights reserved by <a
+                                href="index.html">QCS.AZ</a></p>
                     </div>
 
                 </div>
@@ -581,7 +629,6 @@
     ================================================== -->
     <script src="js/jquery.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
-
     <!-- Plugins for this template -->
     <script src="js/jquery-plugin-collection.js"></script>
 
@@ -593,7 +640,7 @@
     <script src="http://maps.googleapis.com/maps/api/js?key="></script>
     <!-- Custom script for this template -->
     <script src="js/script.js"></script>
-
+    <script src="js/lang.js"></script>
     <!-- //contact form -->
     <script>
         document.addEventListener("DOMContentLoaded", function () {
