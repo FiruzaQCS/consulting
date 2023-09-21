@@ -41,6 +41,9 @@
 </head>
 
 <style>
+     .lower-topbar {
+        padding: 10px 0 10px !important;
+    }
     .left-col li i::before {
         color: #9c1420;
         padding-right: 10px;
@@ -224,12 +227,11 @@
                         <div class="col col-md-4">
                             <div class="login-language">
                                 <div class="language">
-                                    <span>Lang: </span>
+                                    <span class="translate" data-key="lang">Lang: </span>
                                     <form>
-                                        <select class="selectpicker">
-                                            <option>ENG</option>
-                                            <option>TUK</option>
-                                            <option>SPH</option>
+                                        <select class="selectpicker" id="languageSelector">
+                                            <option value="en">ENG</option>
+                                            <option value="az">AZ</option>
                                         </select>
                                     </form>
                                 </div>
@@ -251,12 +253,12 @@
                                 <ul>
                                     <li>
                                         <span class="fi flaticon-pin"></span>
-                                        <h4>Location</h4>
+                                        <h4 class="translate" data-key="location">Location</h4>
                                         <span class="info">90 State Street Suite 700 Albany, New York, US, 12207</span>
                                     </li>
                                     <li>
                                         <span class="fi flaticon-technology"></span>
-                                        <h4>Request Call Back</h4>
+                                        <h5 class="translate" data-key="callback">Request Call Back</h5>
                                         <span class="info">+994 50 389 79 33</span>
                                     </li>
                                 </ul>
@@ -279,12 +281,13 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li><a href="services.html">Services</a></li>
-                            <li><a href="about.html">About us</a></li>
-                            <li><a href="publications.html">Publications</a></li>
-                            <li  class="current"><a href="membership.html">Membership</a></li>
-                            <li><a href="index.html">Contact</a></li>
+                            <li><a class="translate" data-key="home" href="index.html">Home</a>
+                            </li>
+                            <li><a class="translate" data-key="service" href="services.html">Services</a></li>
+                            <li><a class="translate" data-key="about" href="about.html">About us</a></li>
+                            <li><a class="translate" data-key="publication" href="publications.html">Publications</a></li>
+                            <li class="current"><a class="translate" data-key="membership" href="membership.html">Membership</a></li>
+                            <li><a class="translate" data-key="contact" href="index.html">Contact</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
 
@@ -301,15 +304,16 @@
         <section class="page-title">
             <div class="container">
                 <div class="title-box">
-                    <h1>Membership
+                    <h1 class="translate" data-key="membership">Membership
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li>Membership</li>
+                        <li><a class="translate" data-key="home" href="index.html">Home</a></li>
+                        <li class="translate" data-key="membership">Membership</li>
                     </ol>
                 </div>
             </div> <!-- end container -->
         </section>
+
         <section class="careers-content section-padding">
             <div class="container">
                 <div class="row">
@@ -317,11 +321,11 @@
                         <div class="row first-row">
                             <div class="col col-md-3">
                                 <div class="section-title">
-                                    <h2>Careers</h2>
+                                    <h2 class="translate" data-key="careers-header">Careers</h2>
                                 </div>
                             </div>
                             <div class="col col-md-9">
-                                <h3 style="margin: 0;">
+                                <h3 style="margin: 0;" class="translate" data-key="careers-title">
                                     Build your organization’s culture of quality with the support of QCS LLC
                                 </h3>
                             </div>
@@ -346,13 +350,11 @@
                         <div class="row reason-joinus">
                             <div class="col col-lg-4">
                                 <div class="section-title">
-                                    <h2>Reason to Join Us</h2>
+                                    <h2 class="translate" data-key="reason-title"></h2>
                                 </div>
                             </div>
                             <div class="col col-md-8">
-                                <p>Build your organization’s culture of quality with the support of QCS LLC.
-                                    Our membership is open to all organizations regardless of type, size or nature. QCS
-                                    LLC membership gives you a wide range of opportunities at the best price:
+                                <p  class="translate" data-key="reason-desc">
                                 </p>
                             </div>
 
@@ -360,51 +362,25 @@
                         <div class="row reason-joinus">
                             <div class="col col-lg-6 grid-wrapper">
                                 <ul>
-                                    <li><i class="fa fa-chevron-circle-right"></i>ISO 9001:2015 Awareness
-                                    </li>
+                                    <li><i class="fa fa-chevron-circle-right translate"  data-key="awareness-9001"></i></li>
                                     <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i> ISO 9001:2015 Internal auditor
-                                    </li>
+                                    <li><i class="fa fa-chevron-circle-right translate"  data-key="internal-9001"></i></li>
                                     <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i>ISO 9001:2015 Lead auditor
-                                    </li>
+                                    <li><i class="fa fa-chevron-circle-right translate"  data-key="lead-9001"></i></li>
                                     <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i> ISO 14001:2015 Awareness
-                                    </li>
-                                    <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i>ISO 14001:2015 Internal auditor
-                                    </li>
-                                    <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i> ISO 14001:2015 Lead auditor</li>
-                                    <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i> ISO 45001:2018 Awareness
-                                    </li>
-                                    <hr>
+                                    <li><i class="fa fa-chevron-circle-right translate"  data-key="awareness-14001"></i></li>
+                                    
                                 </ul>
                             </div>
                             <div class="col col-lg-6 grid-wrapper">
                                 <ul>
-                                    <li><i class="fa fa-chevron-circle-right"></i> ISO 45001:2018 Internal auditor
-                                    </li>
+                                    <li><i class="fa fa-chevron-circle-right translate"  data-key="internal-14001"></i></li>
                                     <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i> ISO 45001:2018 Lead auditor
-                                    </li>
+                                    <li><i class="fa fa-chevron-circle-right translate"  data-key="lead-14001"></i></li>
                                     <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i>Basic Fire Safety
-                                    </li>
+                                    <li><i class="fa fa-chevron-circle-right translate"  data-key="awareness-45001"></i></li>
                                     <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i>Fire Warden
-                                    </li>
-                                    <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i>Basic First Aid
-                                    </li>
-                                    <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i>Project management Fundamentals
-                                    </li>
-                                    <hr>
-                                    <li><i class="fa fa-chevron-circle-right"></i>Integrated Management System (IMS)
-                                        implementation
-                                    </li>
+                                    <li><i class="fa fa-chevron-circle-right translate"  data-key="internal-45001"></i></li>
                                 </ul>
                             </div>
                         </div>
@@ -415,33 +391,33 @@
                             <div class="widget">
                                 <div class="link-widget">
                                     <ul>
-                                        <li><a href="about.html">About us</a></li>
-                                        <li><a href="services.html">Services</a></li>
-                                        <li><a href="publications.html">Publications</a></li>
+                                        <li><a class="translate" data-key="about" href="about.html">About us</a></li>
+                                        <li><a class="translate" data-key="service" href="services.html">Services</a></li>
+                                        <li><a class="translate" data-key="publication" href="publications.html">Publications</a></li>
                                     </ul>
                                 </div>
                             </div>
 
                             <div class="widget download-widget">
-                                <h3>Download documents</h3>
+                                <h3 class="translate" data-key="downloadDoc">Download documents</h3>
                                 <ul>
-                                    <li><a target="_blank"
-                                            href="images/publisher/Audits-Certification-procedure-extraction-QMS-PR-011.pdf"><i
-                                                class="fa fa-file-pdf-o"></i> Audits & Certification procedure
+                                    <li><a class="translate" data-key="doc-1" target="_blank"
+                                            href="images/publisher/Audits-Certification-procedure-extraction-QMS-PR-011.pdf">
+                                            <i class="fa fa-file-pdf-o"></i> Audits & Certification procedure
                                             (Extraction)</a></li>
-                                    <li><a target="_blank"
+                                    <li><a  class="translate" data-key="doc-2" target="_blank"
                                             href="images/publisher/QCS-Anti-Corruption-Policy-Statement.pdf"><i
-                                                class="fa fa-file-pdf-o"></i> QCS Anti-Corruption Policy Statement
+                                                class="fa fa-file-pdf-o translate"></i> QCS Anti-Corruption Policy Statement
                                         </a></li>
-                                    <li style="text-align: center;"><a href="publications.html">View more</a></li>
+                                    <li style="text-align: center;"><a href="publications.html"  class="translate" data-key="viewmore-button">View more</a></li>
                                 </ul>
                             </div>
 
                             <div class="widget news-letter-widget">
-                                <h4 style="margin: 0;">Have Enquiry</h4>
-                                <p>Contact with us through our representative or submit a business inquiry online</p>
+                                <h4 style="margin: 0;"  class="translate" data-key="enquiry">Have Enquiry</h4>
+                                <p  class="translate" data-key="enquiry-desc">Contact with us through our representative or submit a business inquiry online</p>
                                 <div>
-                                    <button class="btn"><a href="index.html#contact">Contact us</a></button>
+                                    <button class="btn translate" data-key="contactus"><a href="index.html#contact">Contact us</a></button>
                                 </div>
                             </div>
                         </div>
@@ -449,6 +425,7 @@
                 </div>
             </div> <!-- end container -->
         </section>
+
         <section class="recent-job section-padding parallax" data-bg-image="images/membership/recent-job-bg.jpg"
             style="background-image: url(&quot;images/membership/recent-job-bg.jpg&quot;); background-position: 50% 12.3844px; background-size: cover;">
             <div class="container">
@@ -457,14 +434,12 @@
                         <div class="recent-job-slider">
                             <div class="job-list">
                                 <div class="job-title">
-                                    <h3>Associate Consultant Intern</h3>
-                                    <span class="job-post">Project Management</span>
+                                    <h3 class="translate" data-key="consultant-intern">Associate Consultant Intern</h3>
+                                    <span class="job-post">QCS LLC</span>
                                 </div>
                                 <div class="job-description">
                                     <div class="left-col">
-                                        <p>Offered as part of our internship program for undergrads, as an
-                                            associate consultant intern you'll gain broad exposure to the
-                                            consulting industry and to business strategy.</p>
+                                        <p class="translate" data-key="consultant-intern-desc"></p>
                                     </div>
                                     <div class="right-col">
                                         <span class="icon">
@@ -473,7 +448,7 @@
                                         <span class="location">	
                                             90 State Street Suite 700,
                                             Albany, New York, US, 12207</span>
-                                        <a href="index.html#contact" class="btn apply-btn">Apply Now</a>
+                                        <a href="index.html#contact" class="btn apply-btn translate" data-key="apply-button">Apply Now</a>
                                     </div>
                                 </div>
                             </div>
@@ -491,7 +466,7 @@
                             <div class="widget about-widget">
                                 <a href="index.html" class="footer-logo"><img src="images/Logo-QCS.png" alt
                                         class="img img-responsive"></a>
-                                <p>
+                                <p class="translate" data-key="qcs-footer-desc">
                                     QCS LLC is an independent non-governmental organization dedicated to promoting
                                     sustainable certification, auditing, inspection, consulting, training and
                                     educational services.
@@ -500,24 +475,24 @@
                                     <span class="icon">
                                         <i class="fi flaticon-time"></i>
                                     </span>
-                                    <h4>Opening hours</h4>
-                                    <span class="time">Mon - Fri: 9 am - 7 pm</span>
+                                    <h4 class="translate" data-key="openingHours">Opening hours</h4>
+                                    <span class="time translate" data-key="hours">Mon - Fri: 9 am - 7 pm</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget newsletter-widget" style="text-align: center;">
-                                <h3>Services</h3>
+                                <h3 class="translate" data-key="service">Services</h3>
                                 <ul>
-                                    <li>
+                                    <li class="translate" data-key="audit-box">
                                         Audit & Certification
                                     </li>
                                     <hr>
-                                    <li>
+                                    <li class="translate" data-key="solution-box">
                                         Software Solutions
                                     </li>
                                     <hr>
-                                    <li>
+                                    <li class="translate" data-key="training-box">
                                         Training & Development
                                     </li>
                                 </ul>
@@ -525,20 +500,22 @@
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget site-map-widget" style="text-align: center;">
-                                <h3>Links</h3>
+                                <h3 class="translate" data-key="links">Links</h3>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="publications.html">Publications</a></li>
-                                    <li><a href="membership.html">Membership</a></li>
-                                    <li><a href="index.html">Contact</a></li>
+                                    <li><a class="translate" data-key="home" href="index.html">Home</a></li>
+                                    <li><a class="translate" data-key="service" href="services.html">Services</a></li>
+                                    <li><a class="translate" data-key="about" href="about.html">About</a></li>
+                                    <li><a class="translate" data-key="publication"
+                                            href="publications.html">Publications</a></li>
+                                    <li><a class="translate" data-key="membership" href="membership.html">Membership</a>
+                                    </li>
+                                    <li><a class="translate" data-key="contact" href="index.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget social-media-widget">
-                                <h3>Social media</h3>
+                                <h3 class="translate" data-key="socialMedia">Social media</h3>
                                 <ul class="">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -553,7 +530,8 @@
             <div class="copyright">
                 <div class="container">
                     <div class="col col-md-6">
-                        <p>2023 &copy; All rights reserved by <a href="index.html">QCS.AZ</a></p>
+                        <p class="translate" data-key="allRights">2023 &copy; All rights reserved by <a
+                                href="index.html">QCS.AZ</a></p>
                     </div>
 
                 </div>
@@ -581,6 +559,7 @@
     <script src="http://maps.googleapis.com/maps/api/js?key="></script>
     <!-- Custom script for this template -->
     <script src="js/script.js"></script>
+    <script src="js/lang.js"></script>
 
 </body>
 
