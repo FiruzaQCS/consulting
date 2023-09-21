@@ -66,28 +66,28 @@
 
     .btn-wrapper .btn {
         background-color: transparent;
-    width: 100%;
-    height: 100%;
-    position: relative;
-    font-size: 1.125rem;
-    font-weight: bold;
-    color: #f39c12;
-    padding: 0;
-    border: 0;
-    border-radius: 0;
-    box-shadow: none;
-    outline: none;
+        width: 100%;
+        height: 100%;
+        position: relative;
+        font-size: 1.125rem;
+        font-weight: bold;
+        color: #f39c12;
+        padding: 0;
+        border: 0;
+        border-radius: 0;
+        box-shadow: none;
+        outline: none;
     }
 
     .contact-form .submit-btn .btn-wrapper:before {
-    background-color: #fff;
-    content: "";
-    width: 146px;
-    height: 41px;
-    position: absolute;
-    left: 2px;
-    top: 2px;
-}
+        background-color: #fff;
+        content: "";
+        width: 146px;
+        height: 41px;
+        position: absolute;
+        left: 2px;
+        top: 2px;
+    }
 </style>
 
 <body>
@@ -122,12 +122,11 @@
                         <div class="col col-md-4">
                             <div class="login-language">
                                 <div class="language">
-                                    <span>Lang: </span>
+                                    <span class="translate" data-key="lang">Lang: </span>
                                     <form>
-                                        <select class="selectpicker">
-                                            <option>ENG</option>
-                                            <option>TUK</option>
-                                            <option>SPH</option>
+                                        <select class="selectpicker" id="languageSelector">
+                                            <option value="en">ENG</option>
+                                            <option value="az">AZ</option>
                                         </select>
                                     </form>
                                 </div>
@@ -149,12 +148,12 @@
                                 <ul>
                                     <li>
                                         <span class="fi flaticon-pin"></span>
-                                        <h4>Location</h4>
+                                        <h4 class="translate" data-key="location">Location</h4>
                                         <span class="info">90 State Street Suite 700 Albany, New York, US, 12207</span>
                                     </li>
                                     <li>
                                         <span class="fi flaticon-technology"></span>
-                                        <h4>Request Call Back</h4>
+                                        <h5 class="translate" data-key="callback">Request Call Back</h5>
                                         <span class="info">+994 50 389 79 33</span>
                                     </li>
                                 </ul>
@@ -177,12 +176,13 @@
                     <div id="navbar" class="navbar-collapse collapse">
                         <button class="close-navbar"><i class="fa fa-close"></i></button>
                         <ul class="nav navbar-nav">
-                            <li><a href="index.html">Home</a></li>
-                            <li class="current"><a href="services.html">Services</a></li>
-                            <li><a href="about.html">About us</a></li>
-                            <li><a href="publications.html">Publications</a></li>
-                            <li><a href="membership.html">Membership</a></li>
-                            <li><a href="index.html">Contact</a></li>
+                            <li><a class="translate" data-key="home" href="index.html">Home</a>
+                            </li>
+                            <li class="current"><a class="translate" data-key="service" href="services.html">Services</a></li>
+                            <li><a class="translate" data-key="about" href="about.html">About us</a></li>
+                            <li><a class="translate" data-key="publication" href="publications.html">Publications</a></li>
+                            <li><a class="translate" data-key="membership" href="membership.html">Membership</a></li>
+                            <li><a class="translate" data-key="contact" href="index.html">Contact</a></li>
                         </ul>
                     </div><!-- end of nav-collapse -->
 
@@ -202,9 +202,9 @@
                     <h1>Audit & Certification
                     </h1>
                     <ol class="breadcrumb">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="index.html">Services</a></li>
-                        <li>Audit & Certification</li>
+                        <li><a class="translate" data-key="home" href="index.html">Home</a></li>
+                        <li><a class="translate" data-key="service" href="index.html">Services</a></li>
+                        <li class="translate" data-key="audit-box">Audit & Certification</li>
                     </ol>
                 </div>
             </div> <!-- end container -->
@@ -216,7 +216,7 @@
                     <div class="col col-lg-9 col-md-8">
                         <div class="section-title row" style="margin: 0 !important;">
                             <div class="col col-xs-12">
-                                <h2>About Audit & Certification</h2>
+                                <h2 class="translate" data-key="audit-about">About Audit & Certification</h2>
                             </div>
                         </div> <!-- end section-title -->
                         <hr>
@@ -230,16 +230,7 @@
                                         <img src="images/about-slider/img-2.jpg" alt>
                                     </div>
                                 </div>
-                                <p>
-                                    ISO certification is proof from a third party, that you comply with one or more
-                                    ISO management standards. For some industries, certification is a legal or
-                                    contractual requirement.
-                                    <br>
-                                    ISO 9001:2015 (Quality management system), ISO 14001:2015 (Environmental
-                                    management system) and ISO 45001:2018 (Occupational health and safety management
-                                    system) are the most popular standards and they are applicable to any
-                                    organization regardless of its size, type, and sector of activity whether it is
-                                    a business enterprise, a public administration, or a government department.
+                                <p class="translate" data-key="audit-title">
                                 </p>
                             </div>
                         </div>
@@ -248,12 +239,12 @@
                             <div class="title row">
                                 <div class="col col-md-5">
                                     <div class="section-title" style="margin: 0 !important;">
-                                        <h2 style="line-height: 1;">Benefit of Service
+                                        <h2 style="line-height: 1;" class="translate" data-key="audit-benefit-title">Benefit of Service
                                         </h2>
                                     </div>
                                 </div>
                                 <div class="col col-md-7">
-                                    <h4 style="text-align: center;">
+                                    <h4 class="translate" data-key="freeConsult">
                                         Request Free Consultation
                                     </h4>
                                 </div>
@@ -261,13 +252,7 @@
 
                             <div class="row details">
                                 <div class="col col-md-5 left-col">
-                                    <p>
-                                        Internationally recognized certification is a valuable investment in your future
-                                        and demonstration of your commitment to quality, protection of information,
-                                        occupational health & safety, environment. A well designed and implemented
-                                        Management System, based on international standards provides organizations with
-                                        an increased opportunity to win tenders, increase the number of customers,
-                                        reduce costs, prevent accidents and environmental impacts
+                                    <p class="translate" data-key="audit-benefit-desc">
                                     </p>
                                 </div>
                                 <div class="col col-md-7 right-col contact-block" style="height: 284px;">
@@ -275,32 +260,32 @@
                                     <div class="contact-form">
                                         <form class="form" id="contact-form" action="https://formspree.io/f/xyyqpzlr">
                                             <div style="margin-bottom: 20px;">
-                                                <input type="text" name="name" class="form-control"
+                                                <input type="text" name="name" class="form-control translate"  data-key="input-fullname"
                                                     placeholder="Full Name">
                                             </div>
                                             <div style="margin-bottom: 20px;">
-                                                <input type="email" name="email" class="form-control"
+                                                <input type="email" name="email" class="form-control translate"  data-key="input-email"
                                                     placeholder="Email">
                                             </div>
                                             <div style="margin-bottom: 20px;">
-                                                <input type="text" name="text" class="form-control"
+                                                <input type="text" name="text" class="form-control translate"  data-key="input-subject"
                                                     placeholder="Subject">
                                             </div>
                                             <div style="margin-bottom: 20px;">
-                                                <textarea class="form-control" name="message"
+                                                <textarea class="form-control translate"  data-key="input-message" name="message"
                                                     placeholder="Message"></textarea>
                                             </div>
                                             <div class="submit-btn">
                                                 <div class="btn-wrapper">
-                                                    <button type="submit" class="btn">Submit</button>
+                                                    <button type="submit" class="btn translate"  data-key="submit-button">Submit</button>
                                                     <span id="loader">
                                                         <img src="images/contact-ajax-loader.gif" alt="Loader">
                                                     </span>
                                                 </div>
                                             </div>
                                             <div class="col col-md-12 error-handling-messages">
-                                                <div id="success">Thank you</div>
-                                                <div id="error"> Error occurred while sending email. Please try again
+                                                <div id="success" class="translate" data-key="msj-success">Thank you</div>
+                                                <div id="error" class="translate" data-key="msj-failed"> Error occurred while sending email. Please try again
                                                     later.
                                                 </div>
                                             </div>
@@ -319,22 +304,21 @@
                             <div class="widget">
                                 <div class="link-widget">
                                     <ul>
-                                        <li class="active"><a href="service3.html">Audit & Certification</a></li>
-                                        <li><a href="service2.html">Software Solutions</a></li>
-                                        <li><a href="service1.html">Training & Development</a></li>
+                                        <li class="active"><a class="translate" data-key="audit-box" href="service3.html">Audit & Certification</a></li>
+                                        <li><a class="translate" data-key="solution-box" href="service2.html">Software Solutions</a></li>
+                                        <li><a  class="translate" data-key="training-box" href="service1.html">Training & Development</a></li>
                                     </ul>
                                 </div>
                             </div>
                             <div class="widget news-letter-widget">
-                                <h4 style="margin: 0;">Have Enquiry</h4>
-                                <p>Contact with us through our representative or submit a business inquiry online</p>
+                                <h4 class="translate" data-key="enquiry" style="margin: 0;">Have Enquiry</h4>
+                                <p class="translate" data-key="enquiry-desc">Contact with us through our representative or submit a business inquiry online</p>
                                 <div>
-                                    <button class="btn"><a href="index.html#contact">Contact us</a></button>
+                                    <button class="btn translate" data-key="contactus"><a href="index.html#contact">Contact us</a></button>
                                 </div>
                             </div>
                         </div>
                     </div>
-
                 </div>
             </div> <!-- end container -->
         </section>
@@ -348,7 +332,7 @@
                             <div class="widget about-widget">
                                 <a href="index.html" class="footer-logo"><img src="images/Logo-QCS.png" alt
                                         class="img img-responsive"></a>
-                                <p>
+                                <p class="translate" data-key="qcs-footer-desc">
                                     QCS LLC is an independent non-governmental organization dedicated to promoting
                                     sustainable certification, auditing, inspection, consulting, training and
                                     educational services.
@@ -357,24 +341,24 @@
                                     <span class="icon">
                                         <i class="fi flaticon-time"></i>
                                     </span>
-                                    <h4>Opening hours</h4>
-                                    <span class="time">Mon - Fri: 9 am - 7 pm</span>
+                                    <h4 class="translate" data-key="openingHours">Opening hours</h4>
+                                    <span class="time translate" data-key="hours">Mon - Fri: 9 am - 7 pm</span>
                                 </div>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget newsletter-widget" style="text-align: center;">
-                                <h3>Services</h3>
+                                <h3 class="translate" data-key="service">Services</h3>
                                 <ul>
-                                    <li>
+                                    <li class="translate" data-key="audit-box">
                                         Audit & Certification
                                     </li>
                                     <hr>
-                                    <li>
+                                    <li class="translate" data-key="solution-box">
                                         Software Solutions
                                     </li>
                                     <hr>
-                                    <li>
+                                    <li class="translate" data-key="training-box">
                                         Training & Development
                                     </li>
                                 </ul>
@@ -382,20 +366,22 @@
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget site-map-widget" style="text-align: center;">
-                                <h3>Links</h3>
+                                <h3 class="translate" data-key="links">Links</h3>
                                 <ul>
-                                    <li><a href="index.html">Home</a></li>
-                                    <li><a href="services.html">Services</a></li>
-                                    <li><a href="about.html">About</a></li>
-                                    <li><a href="publications.html">Publications</a></li>
-                                    <li><a href="membership.html">Membership</a></li>
-                                    <li><a href="index.html">Contact</a></li>
+                                    <li><a class="translate" data-key="home" href="index.html">Home</a></li>
+                                    <li><a class="translate" data-key="service" href="services.html">Services</a></li>
+                                    <li><a class="translate" data-key="about" href="about.html">About</a></li>
+                                    <li><a class="translate" data-key="publication"
+                                            href="publications.html">Publications</a></li>
+                                    <li><a class="translate" data-key="membership" href="membership.html">Membership</a>
+                                    </li>
+                                    <li><a class="translate" data-key="contact" href="index.html">Contact</a></li>
                                 </ul>
                             </div>
                         </div>
                         <div class="col col-lg-3 col-sm-3">
                             <div class="widget social-media-widget">
-                                <h3>Social media</h3>
+                                <h3 class="translate" data-key="socialMedia">Social media</h3>
                                 <ul class="">
                                     <li><a href="#"><i class="fa fa-facebook"></i></a></li>
                                     <li><a href="#"><i class="fa fa-twitter"></i></a></li>
@@ -410,7 +396,8 @@
             <div class="copyright">
                 <div class="container">
                     <div class="col col-md-6">
-                        <p>2023 &copy; All rights reserved by <a href="index.html">QCS.AZ</a></p>
+                        <p class="translate" data-key="allRights">2023 &copy; All rights reserved by <a
+                                href="index.html">QCS.AZ</a></p>
                     </div>
 
                 </div>
@@ -438,10 +425,10 @@
     <script src="http://maps.googleapis.com/maps/api/js?key="></script>
     <!-- Custom script for this template -->
     <script src="js/script.js"></script>
-
+    <script src="js/lang.js"></script>
     <!-- //contact form -->
     <script>
-        
+
         document.addEventListener("DOMContentLoaded", function () {
             const contactForm = document.getElementById("contact-form");
 
@@ -477,8 +464,6 @@
         });
 
     </script>
-
-
 
 </body>
 
